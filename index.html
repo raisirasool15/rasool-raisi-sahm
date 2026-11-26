@@ -1,0 +1,1018 @@
+<!DOCTYPE html>
+
+<html dir="rtl" lang="fa">
+<head>
+<meta charset="utf-8"/><meta content="width=device-width,initial-scale=1" name="viewport"/>
+<meta content="#071426" name="theme-color"/><meta name="application-name" content="رسول رئیسی سهم"/><meta name="description" content="نسخه آزمایشی برنامه رسول رئیسی سهم؛ آماده‌سازی برای میزبانی آنلاین"/><title>رسول رئیسی سهم | نسخه ۳۷ - آماده‌سازی آزمون آنلاین</title>
+<style>
+:root{--bg:#071426;--panel:#0c1b30;--line:#263b58;--text:#edf4ff;--muted:#aab8cb;--green:#00d878;--red:#ff465b;--blue:#168bff;--gold:#ffbd35}
+*{box-sizing:border-box}body{margin:0;background:radial-gradient(ellipse at top,#142b49 0,#071426 55%);color:var(--text);font-family:Tahoma,Arial,sans-serif}header{padding:16px 20px;display:flex;align-items:center;justify-content:space-between;gap:16px;border-bottom:1px solid var(--line);background:#081528eF;position:sticky;top:0;z-index:5}.brand{display:flex;gap:14px;align-items:center}.logo{font-size:40px;color:var(--gold)}h1{font-size:clamp(20px,3vw,30px);color:var(--gold);margin:0 0 5px}.sub,.muted{color:var(--muted);font-size:12px}.status{white-space:nowrap;text-align:left;font-size:13px;line-height:2}.dot{display:inline-block;width:10px;height:10px;border-radius:50%;background:var(--green);margin-left:7px;box-shadow:0 0 12px var(--green)}nav{display:flex;gap:5px;overflow:auto;background:#0b192d;border-bottom:1px solid var(--line);padding:5px 10px}nav a{color:#dce7f6;text-decoration:none;padding:9px 14px;white-space:nowrap;border-left:1px solid var(--line);font-size:11px}nav a.active{background:#0753bd}main{max-width:1500px;margin:auto;padding:18px}.grid{display:grid;gap:12px}.stats{grid-template-columns:repeat(5,minmax(0,1fr))}.card{border:1px solid var(--line);border-radius:12px;padding:12px;background:linear-gradient(145deg,#102743,#091629);box-shadow:0 8px 25px #0003}.stat-title{color:#d8e4f4;font-size:14px}.value{font-size:clamp(21px,3vw,32px);font-weight:bold;margin:13px 0 7px}.up{color:var(--green)}.down{color:var(--red)}.teal{border-color:#087d87}.blue{border-color:#1768bd}.purple{border-color:#773db4}.greenbox{border-color:#087e49}.counts{grid-template-columns:repeat(4,minmax(0,1fr));margin-top:12px}.count{text-align:center}.count strong{display:block;font-size:23px;margin-bottom:8px}.content{grid-template-columns:1fr;margin-top:10px}.section-title{font-size:19px;margin:0 0 14px}.table-wrap{overflow:auto}table{width:100%;border-collapse:collapse;min-width:500px}th,td{padding:8px 8px;text-align:center;border-bottom:1px solid #253750;font-size:13px}th{color:#dce8f8;background:#14243b}td:first-child{font-weight:bold}.chart{height:210px;display:flex;align-items:end;gap:7px;padding:18px 5px 25px;border-bottom:1px solid #3b506b;background:repeating-linear-gradient(to bottom,transparent 0 49px,#243750 50px)}.bar{flex:1;border-radius:5px 5px 0 0;background:linear-gradient(#16a5ff,#0752a5);min-width:8px}.quick{margin-top:14px}.quick-grid{display:grid;grid-template-columns:repeat(6,1fr);gap:10px}.quick a{display:block;text-align:center;text-decoration:none;color:white;padding:15px 8px;border-radius:10px;background:#0753bd;border:1px solid #2682ff;font-size:13px}.quick a:nth-child(2){background:#08733e;border-color:#0cbd69}.quick a:nth-child(3){background:#56228b;border-color:#a45be8}.quick a:nth-child(4){background:#96500a;border-color:#f69a20}.quick a:nth-child(5){background:#086b78;border-color:#0db5c7}.quick a:nth-child(6){background:#315c20;border-color:#79bd3c}footer{margin-top:14px;padding:15px 20px;background:#09172a;border-top:1px solid var(--line);display:flex;justify-content:space-between;gap:10px;color:var(--muted);font-size:12px}.note{color:#ffd27a;font-size:11px;margin-top:12px}
+@media(max-width:850px){header{align-items:flex-start}.status{font-size:11px}.stats{grid-template-columns:repeat(5,minmax(0,1fr))}.counts{grid-template-columns:repeat(5,minmax(0,1fr))}.content{grid-template-columns:1fr}.quick-grid{grid-template-columns:repeat(3,1fr)}main{padding:10px}.card{padding:8px}.stat-title{font-size:11px}.count strong{font-size:18px}}
+@media(max-width:480px){header{padding:10px}.logo{font-size:30px}.sub{font-size:10px}.status{max-width:115px}.stats{gap:5px}.counts{gap:5px}.value{font-size:clamp(12px,2vw,21px)}.counts{grid-template-columns:repeat(5,minmax(0,1fr))}.count strong{font-size:20px}nav a{padding:8px 11px;font-size:10px}.quick-grid{grid-template-columns:repeat(2,1fr)}footer{flex-wrap:wrap}.section-title{font-size:16px}.stat-title{font-size:10px}.count strong{font-size:16px}.value{font-size:14px;margin:8px 0 5px}}
+.section-nav{display:flex;gap:6px;overflow:auto;background:#0b192d;border:1px solid var(--line);border-radius:10px;padding:6px;margin:10px 0 8px}.section-nav a{color:#dce7f6;text-decoration:none;padding:9px 14px;white-space:nowrap;border-left:1px solid var(--line);font-size:12px}.section-nav a.active{background:#0753bd;border-radius:7px}
+.brand-heading{display:flex;align-items:center;gap:18px;flex-wrap:wrap}
+.market-clock{display:flex;align-items:center;gap:7px;padding:7px 10px;border:1px solid var(--line);border-radius:9px;background:#0a1b30;font-size:14px;font-weight:bold;white-space:nowrap}
+.market-dot{width:10px;height:10px;border-radius:50%;display:inline-block;flex:0 0 10px}
+.market-dot.open{background:#00d878;box-shadow:0 0 10px #00d878}
+.market-dot.closed{background:#ff465b;box-shadow:0 0 10px #ff465b}
+.market-label{font-size:11px;color:var(--muted);font-weight:normal}
+@media(max-width:600px){header{gap:8px}.brand-heading{gap:7px;align-items:flex-start;flex-direction:column}.market-clock{font-size:12px;padding:5px 8px}.market-label{font-size:10px}}
+
+/* Personal template builder */
+.template-builder{scroll-margin-top:95px}
+.template-heading{display:flex;justify-content:space-between;align-items:center;gap:12px;flex-wrap:wrap}
+.template-heading .section-title{margin-bottom:5px}
+.template-name-label,.template-settings label{display:flex;align-items:center;gap:8px;color:var(--muted);font-size:12px}
+.template-name-label input,.template-settings input,.template-table input,.template-table select{
+  background:#071426;color:var(--text);border:1px solid #536b88;border-radius:6px;padding:7px 8px;
+  font:inherit;min-width:0;width:100%;outline:none
+}
+.template-name-label input{width:180px}
+.template-settings{display:flex;gap:14px;flex-wrap:wrap;margin:16px 0;padding:12px;background:#09182b;border:1px solid var(--line);border-radius:9px}
+.template-settings input{width:68px;text-align:center}
+.template-table-wrap{overflow:auto;border:1px solid var(--line);border-radius:8px}
+.template-table{width:100%;min-width:1050px;border-collapse:separate;border-spacing:0}
+.template-table th,.template-table td{padding:5px 6px;border-bottom:1px solid #263b58;text-align:center;font-size:11px;white-space:nowrap}
+.template-table th{position:sticky;top:0;background:#14243b;color:#dce8f8;z-index:1}
+.template-table td:first-child{color:var(--gold);font-weight:bold;width:34px}
+.template-table input,.template-table select{padding:7px 5px;font-size:11px}
+.template-table .title-input{min-width:140px}
+.template-table .data-select{min-width:145px}
+.template-table .width-input{width:65px}
+.template-table .color-select{min-width:80px}
+.template-footer{display:flex;align-items:center;justify-content:center;gap:12px;flex-wrap:wrap;padding:14px 0 6px}
+.save-template,.template-small-btn{border:0;border-radius:8px;padding:10px 20px;color:white;background:#65a90b;font-family:inherit;font-weight:bold;cursor:pointer;box-shadow:0 3px 10px #0004}
+.save-template:hover{background:#79c51b}
+.template-feedback{font-size:12px;color:var(--green)}
+.saved-templates{border-top:1px solid var(--line);padding-top:12px;margin-top:6px}
+.saved-title{font-size:13px;font-weight:bold;margin-bottom:9px}
+.saved-template-list{display:flex;gap:8px;flex-wrap:wrap;align-items:center}
+.saved-template-item{display:flex;align-items:center;gap:6px;background:#10243c;border:1px solid var(--line);padding:6px 8px;border-radius:8px;font-size:12px}
+.saved-template-item button{font-family:inherit;font-size:11px;border:1px solid #49617e;background:#0a192d;color:var(--text);border-radius:5px;padding:5px 7px;cursor:pointer}
+.saved-template-item button.delete{color:#ff8792;border-color:#8b3c4b}
+@media(max-width:600px){.template-modal-backdrop{position:fixed!important;inset:0!important;align-items:stretch;justify-content:center;padding:env(safe-area-inset-top,4px) 4px env(safe-area-inset-bottom,4px)}.template-modal{position:relative;width:100%;height:calc(100dvh - env(safe-area-inset-top,4px) - env(safe-area-inset-bottom,4px));max-height:none;border-radius:9px;padding:8px}.template-modal-top{gap:6px}.template-close{padding:9px 12px;min-height:42px;flex-shrink:0}.template-settings{gap:8px}.template-settings label{font-size:10px}.template-name-label input{width:140px}.template-table th,.template-table td{padding:4px}.template-builder{padding:9px}}
+
+
+/* Independent template modal */
+.template-modal-backdrop{position:fixed!important;inset:0!important;width:100vw;height:100dvh;z-index:10000;background:#020914eF;display:none;align-items:center;justify-content:center;padding:env(safe-area-inset-top,8px) 8px env(safe-area-inset-bottom,8px)}
+.template-modal-backdrop.open{display:flex!important}
+.template-modal{position:relative;width:min(1180px,100%);height:min(94dvh,900px);max-height:calc(100dvh - 16px);display:flex;flex-direction:column;overflow:hidden;background:#071426;border:1px solid #36506f;border-radius:14px;padding:10px;box-shadow:0 20px 70px #000b}.template-modal-top{position:sticky;top:0;z-index:5;flex:0 0 auto;background:#071426;padding:4px 0 10px;border-bottom:1px solid var(--line)}.template-modal .template-builder{overflow:auto;min-height:0;overscroll-behavior:contain}.template-modal .template-footer{position:sticky;bottom:0;background:#071426;padding:10px 0;z-index:3}
+.template-modal-top{display:flex;align-items:center;justify-content:space-between;gap:12px;margin-bottom:10px}
+.template-close{border:1px solid #a44b58;background:#642431;color:#fff;border-radius:8px;padding:9px 18px;font-family:inherit;font-weight:bold;cursor:pointer}
+.template-apply{border:0;border-radius:8px;padding:10px 18px;color:white;background:#0753bd;font-family:inherit;font-weight:bold;cursor:pointer}
+
+
+#watchTable.customized th,#watchTable.customized td{box-sizing:border-box;white-space:nowrap}#watchTable.customized{min-width:0;width:max-content;max-width:100%}
+
+
+/* Mobile watch actions and symbol detail sheet */
+.watch-toolbar{display:flex;align-items:center;justify-content:space-between;gap:8px;flex-wrap:wrap;margin:-3px 0 10px}
+.watch-export{display:flex;gap:6px;flex-wrap:wrap}
+.watch-export button{border:1px solid #3976b7;background:#102c4c;color:#eaf4ff;border-radius:8px;padding:8px 12px;min-height:38px;font:600 12px Tahoma;cursor:pointer}
+.watch-export button:active{transform:scale(.98)}
+#watchTable tbody tr{cursor:pointer}#watchTable tbody tr:active{background:#173454}
+.market-dot.preopen{background:#ffbd35;box-shadow:0 0 10px #ffbd35}
+.symbol-modal-backdrop{position:fixed;inset:0;z-index:11000;background:#020914eF;display:none;align-items:center;justify-content:center;padding:12px}
+.symbol-modal-backdrop.open{display:flex}
+.symbol-modal{width:min(680px,100%);max-height:92dvh;overflow:auto;overscroll-behavior:contain;background:#09182b;border:1px solid #36506f;border-radius:14px;padding:14px;box-shadow:0 20px 70px #000b}
+.symbol-modal-head{display:flex;align-items:center;justify-content:space-between;gap:10px;position:sticky;top:-14px;background:#09182b;padding:4px 0 10px;border-bottom:1px solid var(--line);z-index:2}
+.symbol-modal-head h3{margin:0;color:var(--gold);font-size:18px}
+.symbol-modal-close{border:1px solid #a44b58;background:#642431;color:white;border-radius:8px;padding:9px 13px;min-height:40px;font:600 12px Tahoma}
+.symbol-detail-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:8px;margin:12px 0}
+.symbol-detail{background:#10243c;border:1px solid #263b58;border-radius:9px;padding:10px;min-width:0}
+.symbol-detail span{display:block;color:var(--muted);font-size:11px;margin-bottom:7px}
+.symbol-detail strong{font-size:15px;overflow-wrap:anywhere}
+.symbol-modal h4{font-size:13px;margin:16px 0 8px;color:#dce8f8}
+.orderbook{width:100%;min-width:0;border-collapse:collapse}
+.orderbook th,.orderbook td{font-size:11px;padding:8px 4px}
+.orderbook .buy{color:var(--green)}.orderbook .sell{color:var(--red)}
+.detail-disclaimer{font-size:11px;color:#ffd27a;line-height:1.9;margin-top:12px}
+@media(max-width:600px){
+ .watch-toolbar{align-items:stretch}.watch-toolbar .muted{font-size:10px;line-height:1.8}
+ .watch-export{width:100%}.watch-export button{flex:1;min-height:42px;font-size:12px}
+ .symbol-modal-backdrop{align-items:flex-end;padding:0}
+ .symbol-modal{width:100%;max-height:90dvh;border-radius:16px 16px 0 0;padding:12px 12px calc(14px + env(safe-area-inset-bottom,0px))}
+ .symbol-modal-head h3{font-size:16px}.symbol-detail-grid{gap:6px}.symbol-detail{padding:9px}.symbol-detail span{font-size:10px}.symbol-detail strong{font-size:13px}
+}
+[hidden]{display:none!important}
+@media(max-width:600px){.stats,.counts{grid-template-columns:repeat(5,minmax(0,1fr));}.stat-title{font-size:9px}.count{font-size:10px;padding:6px 2px}.count strong{font-size:13px}.value{font-size:12px}}
+
+/* Mobile overlay refinement: TSETMC-style layered workspace */
+@media (max-width: 600px){
+  .template-modal-backdrop{position:fixed!important;inset:0!important;width:100vw;height:100dvh;min-height:100svh;z-index:10000;display:none;align-items:stretch;justify-content:stretch;padding:env(safe-area-inset-top,0px) 0 env(safe-area-inset-bottom,0px)!important;background:rgba(2,9,20,.94)}
+  .template-modal-backdrop.open{display:flex!important}
+  .template-modal{position:relative;width:100%;height:100%;min-height:0;max-height:none;border:0;border-radius:0;padding:8px 9px 10px;display:flex;flex-direction:column;overflow:hidden}
+  .template-modal-top{position:sticky;top:0;z-index:20;flex:0 0 auto;min-height:52px;padding:4px 0 9px;margin:0 0 8px;background:#071426;gap:8px}
+  .template-modal-top strong{font-size:13px;line-height:1.6;max-width:65%;}
+  .template-close{position:relative;z-index:30;display:inline-flex;align-items:center;justify-content:center;min-width:76px;min-height:44px;padding:9px 12px;font-size:12px;touch-action:manipulation}
+  .template-modal .template-builder{flex:1 1 auto;min-height:0;overflow-y:auto;overflow-x:hidden;padding:8px;overscroll-behavior:contain;-webkit-overflow-scrolling:touch}
+  .template-settings{gap:7px;margin:10px 0;padding:8px}
+  .template-settings label{font-size:10px;flex:1 1 30%;min-width:90px}
+  .template-settings input{width:58px;padding:7px 4px}
+  .template-name-label{font-size:11px}
+  .template-name-label input{width:125px}
+  .template-table-wrap{max-width:100%;overflow:auto;overscroll-behavior:contain;-webkit-overflow-scrolling:touch}
+  .template-table{min-width:920px}
+  .template-table th,.template-table td{font-size:10px;padding:4px 3px}
+  .template-table input,.template-table select{font-size:10px;padding:7px 4px;min-height:36px}
+  .template-modal .template-footer{position:sticky;bottom:0;z-index:10;flex:0 0 auto;background:#071426;padding:9px 0 calc(9px + env(safe-area-inset-bottom,0px));gap:7px}
+  .template-footer button{min-height:43px;padding:9px 12px;font-size:11px}
+  .template-feedback{font-size:10px}
+  .symbol-modal-backdrop{position:fixed;inset:0;width:100vw;height:100dvh;min-height:100svh;z-index:11000;display:none;align-items:stretch;justify-content:stretch;padding:env(safe-area-inset-top,0px) 0 env(safe-area-inset-bottom,0px)!important;background:rgba(2,9,20,.94)}
+  .symbol-modal-backdrop.open{display:flex}
+  .symbol-modal{width:100%;height:100%;max-height:none;min-height:0;border:0;border-radius:0;padding:8px 10px calc(12px + env(safe-area-inset-bottom,0px));overflow-y:auto;overscroll-behavior:contain;-webkit-overflow-scrolling:touch}
+  .symbol-modal-head{position:sticky;top:0;z-index:25;margin:0;background:#09182b;padding:7px 0 10px;min-height:54px}
+  .symbol-modal-head h3{font-size:15px}
+  .symbol-modal-close{position:relative;z-index:30;min-width:76px;min-height:44px;padding:9px 12px;font-size:12px;touch-action:manipulation}
+  .symbol-detail-grid{grid-template-columns:repeat(2,minmax(0,1fr));gap:6px}
+  .symbol-detail{padding:8px}
+  .symbol-detail span{font-size:10px}
+  .symbol-detail strong{font-size:12px}
+  .symbol-modal h4{font-size:12px;margin:13px 0 7px}
+  .orderbook th,.orderbook td{font-size:10px;padding:7px 3px}
+}
+@media (max-width: 380px){
+  .template-modal-top strong{font-size:12px;max-width:60%}
+  .template-close,.symbol-modal-close{min-width:70px;padding:8px 9px}
+  .symbol-modal{padding-left:7px;padding-right:7px}
+}
+
+
+/* Filter-writing workspace: independent full-screen editor shell */
+#filterModal.filter-modal-backdrop{
+  position:fixed!important; inset:0!important; top:0!important; right:0!important; bottom:0!important; left:0!important;
+  width:100%!important; min-width:0!important; max-width:none!important;
+  height:100vh!important; height:100dvh!important; min-height:100svh!important;
+  margin:0!important; padding:env(safe-area-inset-top,0px) 0 env(safe-area-inset-bottom,0px)!important;
+  display:none!important; align-items:stretch!important; justify-content:stretch!important;
+  overflow:hidden!important; box-sizing:border-box!important; transform:none!important;
+  z-index:2147483647!important; background:#020914!important;
+}
+#filterModal.filter-modal-backdrop.open{display:flex!important}
+#filterModal>.filter-modal{
+  position:relative!important; flex:1 1 auto!important; width:100%!important; min-width:0!important; max-width:none!important;
+  height:100%!important; min-height:0!important; max-height:none!important; margin:0!important;
+  padding:0!important; display:flex!important; flex-direction:column!important; overflow:hidden!important;
+  box-sizing:border-box!important; border:0!important; border-radius:0!important;
+  background:linear-gradient(180deg,#09182b 0%,#06101e 100%)!important;
+}
+#filterModal .filter-modal-head{
+  position:relative!important; flex:0 0 70px!important; min-height:70px!important; width:100%!important;
+  display:flex!important; align-items:center!important; justify-content:center!important;
+  padding:8px 120px!important; margin:0!important; border:0!important; border-bottom:1px solid #29415e!important;
+  background:#0b1d33!important; box-shadow:0 5px 18px #0005!important;
+}
+#filterModal .filter-modal-head strong{color:#f2c66d!important;font-size:18px!important;letter-spacing:.2px!important;text-align:center!important}
+#filterModal .filter-modal-close{
+  position:absolute!important; top:9px!important; left:10px!important; right:auto!important;
+  z-index:2147483647!important; min-width:96px!important; min-height:50px!important; padding:8px 14px!important;
+  display:block!important; visibility:visible!important; opacity:1!important; pointer-events:auto!important;
+  border:1px solid #e06a78!important; border-radius:10px!important; background:#762b3a!important;
+  color:#fff!important; font:600 14px Tahoma,Arial,sans-serif!important; touch-action:manipulation!important;
+}
+#filterModal .filter-modal-empty{flex:1 1 auto!important;width:100%!important;min-width:0!important;min-height:0!important;display:block!important;padding:0!important;margin:0!important;background:#050d18!important}
+@media(max-width:600px){
+ #filterModal .filter-modal-head{flex-basis:64px!important;min-height:64px!important;padding:6px 112px!important}
+ #filterModal .filter-modal-head strong{font-size:15px!important}
+ #filterModal .filter-modal-close{top:6px!important;left:7px!important;min-width:88px!important;min-height:48px!important;font-size:13px!important}
+}
+
+
+/* Inline tab content */
+.main-panel{width:100%;min-width:0;box-sizing:border-box}
+.template-inline-builder{min-width:0;width:100%}
+.template-inline-builder .template-builder{width:100%;box-sizing:border-box;overflow:visible;max-height:none}
+.template-inline-builder .template-table-wrap{max-width:100%;overflow:auto}
+.filter-inline-workspace{min-height:42vh;width:100%;box-sizing:border-box;border:1px dashed #36506f;border-radius:10px;background:#06101e}
+
+/* V21: wider main workspace and compact eight-column watch view */
+@media (max-width: 700px){
+  html,body{width:100%;max-width:100%;overflow-x:hidden}
+  main#home{width:100%;max-width:none;margin:0;padding:3px!important}
+  .stats,.counts,.content{width:100%;max-width:none}
+  .grid{gap:4px}
+  .card{padding:5px!important;border-radius:7px}
+  .section-nav{width:100%;margin:4px 0;padding:3px;gap:3px;border-radius:7px}
+  .section-nav a{flex:1 1 0;text-align:center;padding:8px 3px;font-size:10px}
+  .main-panel{width:100%!important;max-width:none!important;margin:0!important;padding:4px!important;border-radius:7px}
+  .section-title{font-size:13px!important;margin:2px 0 7px!important}
+  .watch-toolbar{margin:0 0 5px!important;gap:4px}
+  .watch-toolbar .muted{font-size:9px!important}
+  .watch-export{gap:3px}
+  .watch-export button{padding:5px 6px!important;min-height:30px!important;font-size:9px!important}
+  .table-wrap{width:100%;max-width:none;overflow-x:hidden!important}
+  #watchTable,#watchTable.customized{width:100%!important;min-width:0!important;max-width:none!important;table-layout:fixed!important;border-collapse:collapse!important}
+  #watchTable th,#watchTable td,#watchTable.customized th,#watchTable.customized td{
+    width:auto!important;max-width:none!important;min-width:0!important;
+    padding:3px 1px!important;font-size:clamp(7px,2.15vw,9px)!important;
+    line-height:1.35!important;white-space:normal!important;overflow:hidden!important;
+    text-overflow:clip!important;overflow-wrap:anywhere!important;height:auto!important;
+  }
+  #watchTable th{font-size:clamp(7px,2.05vw,8.5px)!important}
+  #watchTable td:first-child{font-weight:bold}
+  #indicesTable{width:100%!important;min-width:0!important;table-layout:fixed!important}
+  #indicesTable th,#indicesTable td{font-size:clamp(8px,2.4vw,10px)!important;padding:4px 2px!important;white-space:normal!important;overflow-wrap:anywhere}
+  .template-inline-builder,.template-inline-builder .template-builder{width:100%!important;min-width:0!important;padding:5px!important}
+  .template-inline-builder .template-table-wrap{width:100%;max-width:100%;overflow:auto!important}
+  .template-inline-builder .template-table{min-width:780px!important}
+  .filter-inline-workspace{width:100%!important;min-height:55vh!important;border-radius:5px}
+}
+@media (max-width: 390px){
+  #watchTable th,#watchTable td,#watchTable.customized th,#watchTable.customized td{font-size:7px!important;padding:2px 0!important}
+  .section-nav a{font-size:9px!important;padding:7px 2px!important}
+}
+
+
+/* V22: fit all template editor columns in the phone viewport */
+@media(max-width:700px){
+  .template-inline-builder .template-table-wrap{overflow-x:hidden!important;width:100%!important;}
+  .template-inline-builder .template-table{width:100%!important;min-width:0!important;max-width:100%!important;table-layout:fixed!important;border-collapse:collapse!important;}
+  .template-inline-builder .template-table th,.template-inline-builder .template-table td{min-width:0!important;width:auto!important;padding:3px 1px!important;font-size:clamp(6px,1.75vw,8px)!important;white-space:normal!important;overflow:hidden!important;overflow-wrap:anywhere!important;}
+  .template-inline-builder .template-table th:nth-child(1),.template-inline-builder .template-table td:nth-child(1){width:4%!important}
+  .template-inline-builder .template-table th:nth-child(2),.template-inline-builder .template-table td:nth-child(2){width:15%!important}
+  .template-inline-builder .template-table th:nth-child(3),.template-inline-builder .template-table td:nth-child(3){width:17%!important}
+  .template-inline-builder .template-table th:nth-child(4),.template-inline-builder .template-table td:nth-child(4){width:9%!important}
+  .template-inline-builder .template-table th:nth-child(5),.template-inline-builder .template-table td:nth-child(5){width:12%!important}
+  .template-inline-builder .template-table th:nth-child(6),.template-inline-builder .template-table td:nth-child(6){width:12%!important}
+  .template-inline-builder .template-table th:nth-child(7),.template-inline-builder .template-table td:nth-child(7){width:8%!important}
+  .template-inline-builder .template-table th:nth-child(8),.template-inline-builder .template-table td:nth-child(8){width:11%!important}
+  .template-inline-builder .template-table th:nth-child(9),.template-inline-builder .template-table td:nth-child(9){width:12%!important}
+  .template-inline-builder .template-table input,.template-inline-builder .template-table select{width:100%!important;min-width:0!important;max-width:100%!important;box-sizing:border-box!important;padding:3px 1px!important;font-size:clamp(6px,1.7vw,8px)!important;min-height:27px!important;height:auto!important;}
+  .template-inline-builder .template-table .title-input,.template-inline-builder .template-table .data-select,.template-inline-builder .template-table .color-select,.template-inline-builder .template-table .width-input{min-width:0!important;width:100%!important;}
+  .template-inline-builder .template-table th{line-height:1.25!important;}
+}
+@media(max-width:390px){
+ .template-inline-builder .template-table th,.template-inline-builder .template-table td{font-size:6px!important;padding:2px 0!important}
+ .template-inline-builder .template-table input,.template-inline-builder .template-table select{font-size:6px!important;min-height:24px!important;padding:2px 0!important}
+}
+
+
+
+#filter .filter-project-toolbar{display:flex;flex-wrap:wrap;align-items:center;gap:6px;margin:8px 0 3px}
+#filter .filter-project-toolbar input,#filter .filter-project-toolbar select{min-width:120px;max-width:100%;flex:1 1 130px;box-sizing:border-box;border:1px solid #355777;border-radius:6px;background:#09182a;color:#edf5ff;padding:8px;font:11px Tahoma;direction:rtl}
+#filter .filter-project-toolbar button{border:1px solid #47709a;border-radius:6px;background:#12314d;color:#f1d28b;padding:8px 9px;font:10px Tahoma;cursor:pointer}
+#filter .filter-project-toolbar #filterProjectNew{border-color:#527b70;background:#15382f;color:#c8f2df}
+#filter .filter-project-toolbar #filterProjectDelete{border-color:#80524d;background:#3b2528;color:#ffd1c8}
+#filter .filter-project-feedback{min-height:17px;color:#9fc8e8;font:10px Tahoma;margin:0 2px 4px}
+#filter .filter-average-tab{border-color:#557d70;background:linear-gradient(180deg,#21473c,#152e2b);color:#c7f1dc}
+#filter .filter-output-tab{border-color:#6c6590;background:linear-gradient(180deg,#393354,#242239);color:#e0d8ff}
+#filter .filter-output-panel{border-color:#625b86}
+#filter .filter-output-grid{display:grid;grid-template-columns:1fr 1fr;gap:4px}
+#filter .filter-output-grid .filter-data-block{min-width:0}
+#filter .filter-average-panel{border-color:#527b70}
+#filter .filter-node.output-node{border-color:#9b8bd1;background:linear-gradient(180deg,#403a68,#24213e);color:#e5ddff}
+@media(max-width:700px){#filter .filter-project-toolbar{gap:4px}#filter .filter-project-toolbar input,#filter .filter-project-toolbar select{font-size:10px;padding:7px}#filter .filter-project-toolbar button{font-size:9px;padding:7px 6px}}
+#filter .filter-calc-tab{border-color:#8b6a3d;background:linear-gradient(180deg,#4b3920,#292516);color:#ffe0a0}
+#filter .filter-calc-panel .filter-accordion-group{border-color:#6b5734}
+#filter .smart-money-composite{border-color:#527b9f;background:#142f4b}
+#filter .smart-money-composite code{color:#a8d6ff}
+
+#filter .smart-money-tabs{display:flex;gap:5px;margin:7px 0;padding:3px;background:#0b1c2e;border:1px solid #284662;border-radius:8px}
+#filter .smart-money-tab{flex:1;min-height:35px;border:1px solid transparent;border-radius:6px;background:transparent;color:#b9cce0;font:600 11px Tahoma;cursor:pointer}
+#filter .smart-money-tab.active{background:#1b4569;border-color:#477da8;color:#fff}
+#filter .smart-money-subpanel{display:flex;flex-direction:column;gap:4px}
+</style><style>
+
+/* V26: compact data/eraser tools, draggable filter nodes and connectable wires; filter section only */
+#filter [hidden]{display:none!important}
+#filter .filter-blocks-layout{direction:ltr;display:flex;align-items:flex-start;gap:7px;min-height:55vh;width:100%;position:relative;overflow:hidden;box-sizing:border-box;background:#050d18;border:1px solid #203753;border-radius:9px;padding:6px}
+#filter .filter-tools{flex:0 0 38px;width:38px;display:flex;flex-direction:column;gap:5px;align-items:center;direction:rtl}
+#filter .filter-data-tab,#filter .filter-eraser-tab{flex:0 0 38px;width:38px;height:34px;min-height:34px;align-self:flex-start;border:1px solid #47709a;border-radius:7px;background:linear-gradient(180deg,#183756,#0d2239);color:#f1c66e;font:700 12px Tahoma;display:flex;align-items:center;justify-content:center;cursor:pointer;touch-action:manipulation;padding:0}
+#filter .filter-data-tab span,#filter .filter-eraser-tab span{writing-mode:horizontal-tb;text-orientation:mixed;letter-spacing:0}
+#filter .filter-eraser-tab{border:1px solid #8a5d58;border-radius:7px;background:linear-gradient(180deg,#482a2c,#291b25);color:#ffd2c7;font:700 10px Tahoma;display:flex;align-items:center;justify-content:center;cursor:pointer;touch-action:manipulation;padding:0}
+#filter .filter-eraser-tab.active{outline:2px solid #ff9b7e;box-shadow:0 0 0 2px #411c22}
+#filter .filter-data-panel{direction:rtl;flex:0 0 min(46%,280px);width:min(46%,280px);max-width:280px;min-width:0;max-height:55vh;overflow:auto;background:#09182a;border:1px solid #2b496b;border-radius:7px;padding:7px;box-sizing:border-box}
+#filter .filter-data-panel-head{display:flex;justify-content:space-between;align-items:center;gap:5px;color:#e9f1fb;font-size:11px;padding:5px 3px 9px;border-bottom:1px solid #263f5d;margin-bottom:6px}
+#filter .filter-data-panel-head span{font-size:9px;color:#91abc7;white-space:nowrap}
+#filter .filter-accordion-group{margin:5px 0;border:1px solid #203b59;border-radius:6px;overflow:hidden}
+#filter .filter-accordion-toggle{width:100%;min-height:36px;display:flex;justify-content:space-between;align-items:center;gap:5px;padding:7px 8px;border:0;background:#132b45;color:#e5effb;font:600 11px Tahoma;text-align:right;cursor:pointer;touch-action:manipulation}
+#filter .filter-accordion-toggle span{color:#f1c66e;font-size:14px}
+#filter .filter-accordion-content{padding:4px;display:flex;flex-direction:column;gap:4px}
+#filter .filter-data-block{width:100%;display:flex;align-items:center;justify-content:space-between;gap:5px;padding:7px 6px;min-height:34px;border:1px solid #294866;border-radius:5px;background:#0c2035;color:#dce9f7;font:10px Tahoma;text-align:right;cursor:pointer;touch-action:manipulation}
+#filter .filter-data-block code{font:10px Consolas,monospace;color:#f2c66d;background:#06101d;border-radius:4px;padding:3px 4px;direction:ltr}
+#filter .filter-blocks-workspace{direction:rtl;flex:1 1 auto;min-width:0;min-height:50vh;border:1px dashed #2e4967;border-radius:7px;background:#06101e;position:relative;overflow:hidden;padding:0;box-sizing:border-box}
+#filter .filter-workspace-placeholder{position:absolute;inset:0;display:flex;align-items:center;justify-content:center;pointer-events:none;text-align:center;color:#8199b4;font:11px/2 Tahoma;padding:10px}
+#filter .filter-wires{position:absolute;inset:0;width:100%;height:100%;overflow:visible;z-index:1}
+#filter .filter-wire{stroke:#6bb8f0;stroke-width:2.5;fill:none;cursor:pointer;pointer-events:stroke}
+#filter .filter-wire.selected{stroke:#ff9b7e;stroke-width:4}
+#filter .filter-node{position:absolute;width:38px;height:34px;box-sizing:border-box;z-index:2;border:1px solid #4d83ac;border-radius:6px;background:linear-gradient(180deg,#1b3b59,#0c2238);color:#f4d38a;display:flex;align-items:center;justify-content:center;font:8px Tahoma;text-align:center;line-height:1.15;overflow:visible;touch-action:none;user-select:none;cursor:grab}
+#filter .filter-node:active{cursor:grabbing}
+#filter .filter-node.selected{outline:2px solid #f1c66e}
+#filter .filter-node.connect-source{outline:3px solid #78dfb5;box-shadow:0 0 0 3px #174b3b}
+#filter .filter-node .node-label{max-width:29px;max-height:28px;overflow:hidden;word-break:break-word;pointer-events:none}
+#filter .filter-port{position:absolute;width:8px;height:8px;border-radius:50%;border:1px solid #d9eaff;background:#4b9bd5;top:12px;z-index:3;cursor:crosshair;touch-action:manipulation}
+#filter .filter-port.in{left:-6px;right:auto}
+#filter .filter-port.out{right:-6px;left:auto}
+#filter .filter-port{width:14px;height:14px;top:10px;border-width:2px}
+#filter .filter-node.eraser-hover{border-color:#ff9b7e;background:#492b31}
+#filter .filter-data-block.selected{border-color:#f1c66e;background:#183653}
+@media(max-width:700px){
+ #filter .filter-blocks-layout{min-height:58vh;gap:4px;padding:4px}
+ #filter .filter-tools{flex-basis:38px;width:38px}
+ #filter .filter-data-tab,#filter .filter-eraser-tab{flex-basis:38px;width:38px;height:34px;min-height:34px;font-size:10px}
+ #filter .filter-data-panel{flex-basis:56%;width:56%;max-width:none;max-height:58vh;padding:5px}
+ #filter .filter-data-panel-head{font-size:10px}
+ #filter .filter-accordion-toggle{font-size:10px;min-height:34px;padding:6px}
+ #filter .filter-data-block{font-size:9px;min-height:32px;padding:6px 4px}
+ #filter .filter-data-block code{font-size:9px}
+ #filter .filter-blocks-workspace{padding:6px}
+}</style>
+
+<style>
+/* Filter-only: secondary genuine/legal data drawer */
+#filter .filter-client-tab{font-size:8px!important;line-height:1.1;white-space:normal;word-break:break-word;text-align:center;padding:2px!important}
+#filter .filter-client-panel{top:44px;left:47px}
+#filter .filter-client-panel .filter-data-block{font-size:9px}
+@media(max-width:700px){#filter .filter-client-panel{left:45px;top:42px}}
+/* V28 filter-only: reliable tap-to-connect blocks, larger ports, floating data drawer */
+#filter .filter-blocks-layout{min-height:0;height:68vh;overflow:visible;align-items:stretch;position:relative;padding:5px;gap:5px}
+#filter .filter-tools{position:relative;z-index:12;flex:0 0 38px;width:38px;align-items:center}
+#filter .filter-tools button{width:38px;height:34px;min-height:34px;flex:0 0 34px;font-size:10px;white-space:nowrap}
+#filter .filter-connect-tab{border:1px solid #477d70;border-radius:7px;background:linear-gradient(180deg,#19473f,#102b2b);color:#b8f2d9;font:700 10px Tahoma;display:flex;align-items:center;justify-content:center;cursor:pointer;touch-action:manipulation;padding:0}
+#filter .filter-connect-tab.active{outline:2px solid #78dfb5;box-shadow:0 0 0 2px #123b32}
+#filter .filter-data-panel{position:absolute;z-index:11;left:47px;top:5px;direction:rtl;width:210px;max-width:calc(100% - 55px);max-height:60vh;overflow:auto;flex:none;background:#09182a;border:1px solid #2b496b;border-radius:7px;padding:6px;box-shadow:0 8px 24px #0009}
+#filter .filter-blocks-workspace{height:100%;min-height:0;max-height:none;flex:1 1 auto;overflow:auto;touch-action:pan-x pan-y;overscroll-behavior:contain;padding:0}
+#filter .filter-canvas{position:relative;width:900px;height:900px;min-width:900px;min-height:900px;background-image:radial-gradient(#203751 1px,transparent 1px);background-size:22px 22px}
+#filter .filter-wires{position:absolute;left:0;top:0;width:900px;height:900px;inset:auto;overflow:visible;z-index:1;pointer-events:auto}
+#filter .filter-node{touch-action:none}
+@media(max-width:700px){
+ #filter .filter-blocks-layout{height:65vh;min-height:420px;padding:4px;gap:4px}
+ #filter .filter-tools{flex-basis:38px;width:38px}
+ #filter .filter-tools button{width:38px;height:34px;min-height:34px;flex-basis:34px;font-size:9px}
+ #filter .filter-data-panel{left:45px;top:4px;width:190px;max-width:calc(100% - 50px);max-height:54vh;padding:5px}
+ #filter .filter-blocks-workspace{min-height:0;height:100%;padding:0}
+}
+</style>
+<style>
+/* V30 filter-only: compact two-line tabs and dedicated supply/demand drawer */
+#filter .filter-client-tab,#filter .filter-supply-tab{font-size:8px!important;line-height:1.15;white-space:normal;word-break:normal;text-align:center;padding:2px!important}
+#filter .filter-supply-tab{border-color:#8a6d3f;background:linear-gradient(180deg,#493a20,#2b2418);color:#ffe0a0}
+#filter .filter-supply-panel{top:44px;left:47px;border-color:#78603a}
+#filter .filter-supply-panel .filter-data-block{font-size:9px}
+#filter .filter-note{font:9px/1.8 Tahoma;color:#9bb0c8;padding:6px 3px}
+#filter .filter-configurable-block{border-color:#7a643a;background:linear-gradient(90deg,#10253a,#1d2a32)}
+@media(max-width:700px){#filter .filter-supply-panel{left:45px;top:42px}}
+</style>
+<style>
+#filter .smart-money-out{border-color:#74465a;background:#301b2a}#filter .smart-money-out code{color:#ffb3c0}
+.smart-config-backdrop{position:fixed;inset:0;z-index:99999;background:#020914d9;display:none;align-items:center;justify-content:center;padding:14px}
+.smart-config-backdrop.open{display:flex}.smart-config-dialog{width:min(440px,100%);max-height:90vh;overflow:auto;background:#10243a;border:1px solid #42617e;border-radius:14px;padding:16px;color:#edf4ff;box-shadow:0 18px 55px #000a;font-family:Tahoma,Arial,sans-serif;direction:rtl}
+.smart-config-dialog h3{margin:0 0 14px;font-size:16px}.smart-config-dialog label{display:block;font-size:12px;margin:12px 0 5px;color:#c9d8e8}.smart-config-dialog input,.smart-config-dialog select{width:100%;padding:10px;border:1px solid #496783;border-radius:8px;background:#071729;color:#fff;font:13px Tahoma}.smart-config-dialog .smart-config-actions{display:flex;gap:8px;margin-top:16px}.smart-config-dialog button{flex:1;padding:11px;border:0;border-radius:8px;font: bold 13px Tahoma;cursor:pointer}.smart-config-save{background:#087d59;color:white}.smart-config-cancel{background:#263d55;color:white}.smart-config-help{font-size:11px;line-height:1.8;color:#9fb5cb;margin-top:10px}
+</style></head>
+<body>
+<header>
+<div class="brand">
+<div class="logo">📈</div>
+<div class="brand-title">
+<div class="brand-heading">
+<h1>رسول رئیسی سهم</h1>
+<div aria-live="polite" class="market-clock" dir="rtl">
+<span class="market-dot closed" id="marketDot"></span>
+<span id="marketTime">--:--:--</span>
+<span class="market-label" id="marketLabel">در حال بررسی...</span>
+</div>
+</div>
+<div class="sub">سامانه جامع تحلیل و رصد بازار سرمایه ایران</div>
+</div>
+</div>
+<div class="status"><b>پیش‌نمایش آفلاین</b><br/><span class="muted">داده‌ها نمونه هستند؛ اتصال واقعی هنوز فعال نیست</span></div>
+</header>
+<main id="home">
+<div class="grid stats">
+<div class="card greenbox"><div class="stat-title">شاخص کل</div><div class="value">۸٬۴۶۵٬۵۸۹</div><div class="up">▲ ۱٫۳۴٪</div></div>
+<div class="card purple"><div class="stat-title">شاخص هم‌وزن</div><div class="value">۸۲۴٬۱۳۶</div><div class="up">▲ ۱٫۴۸٪</div></div>
+<div class="card blue"><div class="stat-title">شاخص کل فرابورس</div><div class="value">۲۵٬۴۸۰</div><div class="up">▲ ۰٫۸۲٪</div></div>
+<div class="card teal"><div class="stat-title">ارزش معاملات</div><div class="value">۱۲۷٬۶۵۰</div><div class="muted">میلیارد تومان</div></div>
+<div class="card"><div class="stat-title">خالص پول صندوق‌های طلا</div><div class="value up">+۱٫۲ همت</div><div class="up">▲ ورود پول</div></div>
+</div>
+<div class="grid counts">
+<div class="card count greenbox"><strong class="up">۱٬۴۰۳</strong>نمادهای مثبت</div><div class="card count"><strong class="down">۱۲۷</strong>نمادهای منفی</div><div class="card count"><strong>۶۸۶</strong>بدون معامله</div><div class="card count greenbox"><strong class="up">۱٬۸۹۷</strong>صف‌های خرید</div><div class="card count"><strong class="down">۵۷۲</strong>صف‌های فروش</div>
+</div>
+<div class="grid content">
+<nav aria-label="بخش‌های اصلی" class="section-nav">
+<a class="active" data-main-tab="watch" href="#watch">◉ دیده‌بان</a>
+<a data-main-tab="indices" href="#indices">▤ شاخص</a>
+<a data-main-tab="template" href="#template">▤ قالب</a>
+<a data-main-tab="filter" href="#filter">⌨ فیلترنویسی</a>
+</nav>
+<section class="card main-panel" id="watch">
+<h2 class="section-title">دیده‌بان بازار</h2>
+<div class="watch-toolbar">
+<span class="muted">برای مشاهده اطلاعات هر نماد، ردیف آن را لمس کن.</span>
+<div class="watch-export"><button id="exportCSV" type="button">خروجی CSV</button><button id="exportExcel" type="button">خروجی Excel</button></div>
+</div>
+<div class="table-wrap"><table id="watchTable"><thead><tr><th>نماد</th><th>آخرین قیمت</th><th>درصد تغییر</th><th>حجم معاملات</th><th>قدرت خریدار</th></tr></thead><tbody>
+<tr><td>فولاد</td><td>۳٬۲۴۰</td><td class="up">▲ ۴٫۸۷٪</td><td>۳۲۷٫۸M</td><td class="up">۴٫۶</td></tr>
+<tr><td>فملی</td><td>۸٬۴۲۰</td><td class="up">▲ ۳٫۹۱٪</td><td>۴۵۲٫۷M</td><td class="up">۳٫۹</td></tr>
+<tr><td>شپنا</td><td>۴٬۶۷۰</td><td class="down">▼ ۱٫۵۷٪</td><td>۲۸۹٫۲M</td><td>۰٫۹</td></tr>
+<tr><td>وبملت</td><td>۲٬۱۵۰</td><td class="up">▲ ۲٫۹۸٪</td><td>۱۸۷٫۶M</td><td class="up">۳٫۲</td></tr>
+<tr><td>خودرو</td><td>۳٬۰۸۰</td><td class="down">▼ ۰٫۷۶٪</td><td>۳۹۸٫۱M</td><td>۱٫۱</td></tr>
+<tr><td>شستا</td><td>۱٬۲۴۰</td><td class="up">▲ ۵٫۰۰٪</td><td>۵۲۱٫۰M</td><td class="up">۵٫۲</td></tr>
+<tr><td>خساپا</td><td>۲٬۱۸۰</td><td class="down">▼ ۵٫۰۰٪</td><td>۶۱۲٫۰M</td><td>۰٫۷</td></tr>
+<tr><td>ذوب</td><td>۴٬۵۶۰</td><td class="up">▲ ۲٫۱۴٪</td><td>۲۱۸٫۴M</td><td class="up">۲٫۱</td></tr>
+<tr><td>بفجر</td><td>۱٬۷۸۰</td><td class="down">▼ ۰٫۶۸٪</td><td>۸۹٫۲M</td><td class="down">۰٫۸</td></tr>
+<tr><td>کچاد</td><td>۳٬۹۸۰</td><td class="up">▲ ۱٫۲۵٪</td><td>۱۴۵٫۷M</td><td class="up">۱٫۹</td></tr>
+<tr><td>کگل</td><td>۴٬۲۱۰</td><td class="up">▲ ۰٫۹۴٪</td><td>۱۶۷٫۳M</td><td class="up">۱٫۶</td></tr>
+<tr><td>شتران</td><td>۲٬۹۴۰</td><td class="down">▼ ۱٫۱۰٪</td><td>۲۹۸٫۵M</td><td class="down">۰٫۹</td></tr>
+<tr><td>شبندر</td><td>۶٬۷۸۰</td><td class="up">▲ ۲٫۳۱٪</td><td>۱۷۹٫۱M</td><td class="up">۲٫۷</td></tr>
+<tr><td>پارسان</td><td>۵٬۶۲۰</td><td class="up">▲ ۰٫۷۲٪</td><td>۷۲٫۸M</td><td class="up">۱٫۴</td></tr>
+<tr><td>نوری</td><td>۱۲٬۴۵۰</td><td class="up">▲ ۱٫۸۸٪</td><td>۵۸٫۶M</td><td class="up">۲٫۲</td></tr>
+<tr><td>زاگرس</td><td>۱۸٬۲۱۰</td><td class="down">▼ ۰٫۴۲٪</td><td>۴۱٫۵M</td><td class="down">۰٫۹</td></tr>
+<tr><td>دارا یکم</td><td>۱۴٬۸۰۰</td><td class="up">▲ ۰٫۵۶٪</td><td>۲۳٫۱M</td><td class="up">۱٫۳</td></tr>
+<tr><td>وتجارت</td><td>۱٬۲۹۰</td><td class="down">▼ ۰٫۳۸٪</td><td>۳۳۱٫۰M</td><td class="down">۰٫۸</td></tr>
+<tr><td>خگستر</td><td>۲٬۳۶۰</td><td class="up">▲ ۳٫۰۲٪</td><td>۲۸۷٫۴M</td><td class="up">۳٫۱</td></tr>
+<tr><td>خپارس</td><td>۱٬۱۷۰</td><td class="down">▼ ۱٫۲۲٪</td><td>۱۱۲٫۸M</td><td class="down">۰٫۷</td></tr>
+<tr><td>رمپنا</td><td>۷٬۴۲۰</td><td class="up">▲ ۱٫۰۷٪</td><td>۹۴٫۲M</td><td class="up">۱٫۵</td></tr>
+<tr><td>بترانس</td><td>۲٬۵۸۰</td><td class="up">▲ ۰٫۸۱٪</td><td>۷۶٫۹M</td><td class="up">۱٫۲</td></tr>
+<tr><td>ساراب</td><td>۹٬۸۶۰</td><td class="down">▼ ۰٫۲۵٪</td><td>۱۸٫۴M</td><td class="down">۰٫۹</td></tr>
+<tr><td>سفارس</td><td>۸٬۲۱۰</td><td class="up">▲ ۱٫۶۲٪</td><td>۶۳٫۲M</td><td class="up">۱٫۸</td></tr>
+<tr><td>کاذر</td><td>۲٬۱۱۰</td><td class="up">▲ ۲٫۰۵٪</td><td>۲۲٫۷M</td><td class="up">۲٫۴</td></tr>
+<tr><td>کپارس</td><td>۳٬۴۹۰</td><td class="down">▼ ۰٫۷۷٪</td><td>۱۱٫۸M</td><td class="down">۰٫۸</td></tr>
+<tr><td>چکاپا</td><td>۱٬۸۹۰</td><td class="up">▲ ۱٫۴۰٪</td><td>۳۴٫۶M</td><td class="up">۱٫۷</td></tr>
+<tr><td>چکارن</td><td>۲٬۷۶۰</td><td class="down">▼ ۰٫۵۱٪</td><td>۹٫۷M</td><td class="down">۰٫۹</td></tr>
+<tr><td>شپترو</td><td>۱٬۵۴۰</td><td class="up">▲ ۰٫۹۳٪</td><td>۱۶٫۳M</td><td class="up">۱٫۳</td></tr>
+<tr><td>غکورش</td><td>۳٬۶۸۰</td><td class="up">▲ ۱٫۷۱٪</td><td>۴۸٫۲M</td><td class="up">۲٫۰</td></tr>
+<tr><td>زفکا</td><td>۲٬۹۲۰</td><td class="down">▼ ۰٫۳۳٪</td><td>۲۱٫۴M</td><td class="down">۰٫۹</td></tr>
+<tr><td>تاصیکو</td><td>۴٬۸۱۰</td><td class="up">▲ ۱٫۲۸٪</td><td>۵۷٫۸M</td><td class="up">۱٫۶</td></tr>
+<tr><td>وبصادر</td><td>۱٬۰۸۰</td><td class="up">▲ ۰٫۶۴٪</td><td>۲۶۵٫۳M</td><td class="up">۱٫۴</td></tr>
+<tr><td>وپاسار</td><td>۲٬۴۵۰</td><td class="down">▼ ۰٫۸۹٪</td><td>۷۸٫۱M</td><td class="down">۰٫۸</td></tr>
+<tr><td>های وب</td><td>۱٬۷۳۰</td><td class="up">▲ ۲٫۲۲٪</td><td>۳۹٫۵M</td><td class="up">۲٫۳</td></tr>
+<tr><td>آپ</td><td>۶٬۳۱۰</td><td class="up">▲ ۰٫۴۵٪</td><td>۲۷٫۹M</td><td class="up">۱٫۲</td></tr>
+<tr><td>ثامید</td><td>۱٬۶۸۰</td><td class="down">▼ ۰٫۶۰٪</td><td>۴۴٫۱M</td><td class="down">۰٫۸</td></tr>
+</tbody></table></div>
+<div class="note">* این صفحه خروجی خام دیده‌بان است؛ دسته‌بندی و محدودسازی نمادها بعداً از طریق فیلترنویسی انجام می‌شود. داده‌ها فعلاً نمونه و نمایشی هستند.</div>
+</section>
+<section class="card main-panel" hidden="" id="indices">
+<h2 class="section-title">دیده‌بان همه شاخص‌های بازار و گروه‌های صنعتی</h2>
+<div class="table-wrap"><table id="indicesTable"><thead><tr><th>نام شاخص</th><th>مقدار</th><th>درصد تغییر</th><th>ورود / خروج پول</th></tr></thead><tbody>
+<tr><td>شاخص کل</td><td>۸٬۴۶۵٬۵۸۹</td><td class="up">▲ ۱٫۳۴٪</td><td class="up">+ ۲۴۸ میلیارد</td></tr>
+<tr><td>شاخص هم‌وزن</td><td>۸۲۴٬۱۳۶</td><td class="up">▲ ۱٫۴۸٪</td><td class="up">+ ۸۶ میلیارد</td></tr>
+<tr><td>شاخص صنعت</td><td>۷۱۲٬۴۵۰</td><td class="down">▼ ۰٫۴۲٪</td><td class="down">− ۳۲ میلیارد</td></tr>
+<tr><td>شاخص زراعت و خدمات وابسته</td><td>۲٬۱۸۴٬۳۲۰</td><td class="up">▲ ۰٫۶۸٪</td><td class="up">+ ۱۲ میلیارد</td></tr>
+<tr><td>شاخص استخراج نفت و گاز</td><td>۱٬۳۸۰٬۲۱۰</td><td class="down">▼ ۰٫۲۱٪</td><td class="down">− ۵ میلیارد</td></tr>
+<tr><td>شاخص استخراج کانه‌های فلزی</td><td>۲٬۷۴۰٬۸۰۰</td><td class="up">▲ ۱٫۰۵٪</td><td class="up">+ ۴۱ میلیارد</td></tr>
+<tr><td>شاخص استخراج سایر معادن</td><td>۹۸٬۴۲۰</td><td class="up">▲ ۰٫۳۲٪</td><td class="up">+ ۱ میلیارد</td></tr>
+<tr><td>شاخص محصولات غذایی</td><td>۹۴۸٬۶۰۰</td><td class="down">▼ ۰٫۱۱٪</td><td class="up">+ ۶ میلیارد</td></tr>
+<tr><td>شاخص قند و شکر</td><td>۴۲۱٬۷۰۰</td><td class="up">▲ ۰٫۷۴٪</td><td class="up">+ ۳ میلیارد</td></tr>
+<tr><td>شاخص نساجی</td><td>۲۸۴٬۵۰۰</td><td class="down">▼ ۰٫۴۰٪</td><td class="down">− ۲ میلیارد</td></tr>
+<tr><td>شاخص چرم و پوشاک</td><td>۱۱۲٬۸۰۰</td><td class="up">▲ ۰٫۲۶٪</td><td class="up">+ ۰٫۵ میلیارد</td></tr>
+<tr><td>شاخص چوب و کاغذ</td><td>۱۸۷٬۶۰۰</td><td class="up">▲ ۰٫۸۱٪</td><td class="up">+ ۱٫۸ میلیارد</td></tr>
+<tr><td>شاخص محصولات کاغذی</td><td>۲۳۱٬۴۰۰</td><td class="down">▼ ۰٫۳۷٪</td><td class="down">− ۰٫۷ میلیارد</td></tr>
+<tr><td>شاخص فرآورده‌های نفتی</td><td>۱٬۹۸۴٬۳۰۰</td><td class="up">▲ ۰٫۹۲٪</td><td class="up">+ ۲۸ میلیارد</td></tr>
+<tr><td>شاخص لاستیک و پلاستیک</td><td>۷۸۴٬۲۰۰</td><td class="down">▼ ۰٫۲۸٪</td><td class="down">− ۱٫۴ میلیارد</td></tr>
+<tr><td>شاخص محصولات شیمیایی</td><td>۱٬۲۸۴٬۳۲۰</td><td class="up">▲ ۰٫۷۶٪</td><td class="up">+ ۵۷ میلیارد</td></tr>
+<tr><td>شاخص دارویی</td><td>۱٬۶۷۲٬۹۰۰</td><td class="up">▲ ۰٫۴۱٪</td><td class="up">+ ۹ میلیارد</td></tr>
+<tr><td>شاخص فلزات اساسی</td><td>۲٬۰۴۸٬۷۱۰</td><td class="up">▲ ۱٫۱۲٪</td><td class="down">− ۱۸ میلیارد</td></tr>
+<tr><td>شاخص محصولات فلزی</td><td>۸۷۶٬۵۰۰</td><td class="down">▼ ۰٫۳۳٪</td><td class="down">− ۲٫۱ میلیارد</td></tr>
+<tr><td>شاخص ماشین‌آلات و تجهیزات</td><td>۵۲۸٬۳۰۰</td><td class="up">▲ ۰٫۵۶٪</td><td class="up">+ ۱٫۲ میلیارد</td></tr>
+<tr><td>شاخص دستگاه‌های برقی</td><td>۶۳۴٬۱۰۰</td><td class="up">▲ ۰٫۷۲٪</td><td class="up">+ ۲٫۴ میلیارد</td></tr>
+<tr><td>شاخص خودرو و قطعات</td><td>۵۸۲٬۹۰۰</td><td class="up">▲ ۰٫۳۵٪</td><td class="up">+ ۱۲ میلیارد</td></tr>
+<tr><td>شاخص حمل‌ونقل و انبارداری</td><td>۷۴۲٬۱۰۰</td><td class="down">▼ ۰٫۱۴٪</td><td class="down">− ۱٫۱ میلیارد</td></tr>
+<tr><td>شاخص مخابرات</td><td>۱٬۱۸۴٬۶۰۰</td><td class="up">▲ ۰٫۶۲٪</td><td class="up">+ ۳٫۵ میلیارد</td></tr>
+<tr><td>شاخص بانک‌ها و مؤسسات اعتباری</td><td>۱٬۹۸۰٬۲۱۰</td><td class="down">▼ ۰٫۲۸٪</td><td class="down">− ۴۱ میلیارد</td></tr>
+<tr><td>شاخص سرمایه‌گذاری‌ها</td><td>۱٬۰۴۸٬۲۰۰</td><td class="up">▲ ۰٫۳۱٪</td><td class="up">+ ۴٫۸ میلیارد</td></tr>
+<tr><td>شاخص بیمه و بازنشستگی</td><td>۶۲۸٬۴۰۰</td><td class="down">▼ ۰٫۱۷٪</td><td class="down">− ۱٫۶ میلیارد</td></tr>
+<tr><td>شاخص انبوه‌سازی و املاک</td><td>۴۱۸٬۷۰۰</td><td class="up">▲ ۰٫۸۲٪</td><td class="up">+ ۲٫۷ میلیارد</td></tr>
+<tr><td>شاخص سیمان، آهک و گچ</td><td>۱٬۲۸۴٬۹۰۰</td><td class="up">▲ ۰٫۵۹٪</td><td class="up">+ ۶٫۱ میلیارد</td></tr>
+<tr><td>شاخص کاشی و سرامیک</td><td>۳۲۸٬۴۰۰</td><td class="up">▲ ۱٫۱۶٪</td><td class="up">+ ۲٫۲ میلیارد</td></tr>
+<tr><td>شاخص رایانه و فعالیت‌های وابسته</td><td>۹۴۸٬۳۰۰</td><td class="down">▼ ۰٫۲۴٪</td><td class="down">− ۳٫۸ میلیارد</td></tr>
+<tr><td>شاخص اطلاعات و ارتباطات</td><td>۵۸۴٬۲۰۰</td><td class="up">▲ ۰٫۶۷٪</td><td class="up">+ ۱٫۹ میلیارد</td></tr>
+<tr><td>شاخص خرده‌فروشی</td><td>۲۹۴٬۸۰۰</td><td class="up">▲ ۰٫۴۳٪</td><td class="up">+ ۰٫۹ میلیارد</td></tr>
+<tr><td>شاخص هتل و رستوران</td><td>۱۸۲٬۶۰۰</td><td class="down">▼ ۰٫۳۱٪</td><td class="down">− ۰٫۴ میلیارد</td></tr>
+<tr><td>شاخص پیمانکاری صنعتی</td><td>۳۸۴٬۷۰۰</td><td class="up">▲ ۰٫۵۱٪</td><td class="up">+ ۱٫۱ میلیارد</td></tr>
+<tr><td>شاخص خدمات فنی و مهندسی</td><td>۴۲۸٬۹۰۰</td><td class="up">▲ ۰٫۲۹٪</td><td class="up">+ ۰٫۸ میلیارد</td></tr>
+<tr><td>شاخص لیزینگ</td><td>۳۱۸٬۲۰۰</td><td class="down">▼ ۰٫۲۲٪</td><td class="down">− ۰٫۶ میلیارد</td></tr>
+<tr><td>شاخص سایر واسطه‌گری‌های مالی</td><td>۶۱۸٬۴۰۰</td><td class="up">▲ ۰٫۳۸٪</td><td class="up">+ ۱٫۴ میلیارد</td></tr>
+<tr><td>شاخص صندوق‌های سرمایه‌گذاری</td><td>۱٬۸۴۲٬۶۰۰</td><td class="up">▲ ۰٫۲۱٪</td><td class="up">+ ۱۵ میلیارد</td></tr>
+<tr><td>شاخص محصولات پلاستیکی</td><td>۲۶۸٬۱۰۰</td><td class="down">▼ ۰٫۱۹٪</td><td class="down">− ۰٫۳ میلیارد</td></tr>
+<tr><td>شاخص ابزار پزشکی و اپتیکی</td><td>۴۸۲٬۷۰۰</td><td class="up">▲ ۰٫۴۸٪</td><td class="up">+ ۰٫۶ میلیارد</td></tr>
+<tr><td>شاخص قیر و آسفالت</td><td>۳۲۴٬۸۰۰</td><td class="up">▲ ۰٫۷۱٪</td><td class="up">+ ۰٫۷ میلیارد</td></tr>
+</tbody></table></div>
+<div class="note">* اعداد ورود و خروج پول و مقادیر شاخص‌ها در این پیش‌نمایش نمونه هستند و هنوز از منبع زنده دریافت نمی‌شوند.</div>
+</section><section class="card main-panel" hidden="True" id="template"><h2 class="section-title">مدیریت قالب شخصی دیده‌بان</h2><div class="template-inline-builder"><section class="card template-builder" id="templateBuilder" style="margin-top:0">
+<div class="template-heading">
+<div>
+<h2 class="section-title">ساخت قالب نمایش</h2>
+<div class="muted">تنظیم ستون‌ها و مشخصات ظاهری قالب شخصی دیده‌بان</div>
+</div>
+<div class="template-actions">
+<label class="template-name-label">نام قالب
+        <input id="templateName" maxlength="40" type="text" value="قالب شخصی من"/>
+</label>
+</div>
+</div>
+<div class="template-settings">
+<label>تعداد ستون‌ها <input id="columnCount" max="26" min="1" type="number" value="8"/></label>
+<label>اندازه فونت <input id="fontSize" max="24" min="8" type="number" value="12"/></label>
+<label>ارتفاع سطرها <input id="rowHeight" max="60" min="20" type="number" value="40"/></label>
+</div>
+<div class="template-table-wrap">
+<table class="template-table" id="templateTable">
+<thead><tr><th>#</th><th>عنوان (Title)</th><th>داده (Data)</th><th>تراز (Align)</th><th>رنگ متن</th><th>رنگ زمینه</th><th>عرض</th><th>Style</th><th>Border</th></tr></thead>
+<tbody id="templateRows"></tbody>
+</table>
+</div>
+<div class="template-footer">
+<button class="save-template" id="saveTemplate" type="button">ذخیره قالب شخصی</button>
+<button class="template-apply" id="applyTemplate" type="button">اعمال قالب</button>
+<span aria-live="polite" class="template-feedback" id="templateFeedback"></span>
+</div>
+<div class="saved-templates">
+<div class="saved-title">قالب‌های ذخیره‌شده</div>
+<div class="saved-template-list" id="savedTemplateList"><span class="muted">هنوز قالبی ذخیره نشده است.</span></div>
+</div>
+<div class="note">قالب‌ها در همین مرورگر و دستگاه ذخیره می‌شوند. داده‌های دیده‌بان در این نسخه نمونه هستند و اتصال زنده در مرحله بعد انجام می‌شود.</div>
+</section></div></section>
+<section class="card main-panel" hidden="True" id="filter">
+<h2 class="section-title">فیلترنویسی</h2>
+<p class="muted">بلوک‌ها را از تب‌های داده، حقیقی و حقوقی، عرضه و تقاضا، محاسبه، میانگین یا خروجی انتخاب کن؛ بلوک‌ها در محیط طراحی قابل جابه‌جایی و اتصال هستند.</p>
+<div class="filter-project-toolbar" dir="rtl">
+  <input id="filterProjectName" type="text" maxlength="60" placeholder="نام فیلتر را وارد کن" aria-label="نام فیلتر">
+  <button id="filterProjectSave" type="button">ذخیره فیلتر</button>
+  <button id="filterProjectNew" type="button">فیلتر جدید</button>
+  <select id="filterProjectList" aria-label="فیلترهای ذخیره‌شده"><option value="">فیلترهای ذخیره‌شده</option></select>
+  <button id="filterProjectDelete" type="button">حذف ذخیره</button>
+</div>
+<div class="filter-project-feedback" id="filterProjectFeedback" aria-live="polite"></div>
+<div class="filter-blocks-layout" dir="rtl">
+  <div class="filter-tools"><button class="filter-eraser-tab" id="filterEraserTab" type="button" aria-pressed="false" title="پاک‌کردن بلوک یا سیم"><span>پاک‌کن</span></button><button class="filter-connect-tab" id="filterConnectTab" type="button" aria-pressed="false" title="اتصال بلوک‌ها"><span>اتصال</span></button><button class="filter-data-tab" id="filterDataTab" type="button" aria-expanded="false" aria-controls="filterDataPanel"><span>داده</span></button><button class="filter-data-tab filter-client-tab" id="filterClientTab" type="button" aria-expanded="false" aria-controls="filterClientPanel"><span>حقیقی<br>و حقوقی</span></button><button class="filter-data-tab filter-supply-tab" id="filterSupplyTab" type="button" aria-expanded="false" aria-controls="filterSupplyPanel"><span>عرضه<br>و تقاضا</span></button><button class="filter-data-tab filter-calc-tab" id="filterCalcTab" type="button" aria-expanded="false" aria-controls="filterCalcPanel"><span>محاسبه</span></button><button class="filter-data-tab filter-average-tab" id="filterAverageTab" type="button" aria-expanded="false" aria-controls="filterAveragePanel"><span>میانگین</span></button><button class="filter-data-tab filter-output-tab" id="filterOutputTab" type="button" aria-expanded="false" aria-controls="filterOutputPanel"><span>خروجی</span></button></div>
+  <aside class="filter-data-panel" id="filterDataPanel" hidden aria-label="بلوک‌های داده">
+    <div class="filter-data-panel-head"><strong>بلوک‌های داده TSETMC</strong><span>۱۹ بلوک</span></div>
+    <div class="filter-accordion-group">
+      <button class="filter-accordion-toggle" type="button" aria-expanded="true">اطلاعات معاملات <span>⌄</span></button>
+      <div class="filter-accordion-content">
+        <button class="filter-data-block" type="button" data-block-name="تعداد معاملات" data-block-code="tno"><span>تعداد معاملات</span><code>tno</code></button>
+        <button class="filter-data-block" type="button" data-block-name="حجم معاملات" data-block-code="tvol"><span>حجم معاملات</span><code>tvol</code></button>
+        <button class="filter-data-block" type="button" data-block-name="ارزش معاملات" data-block-code="tval"><span>ارزش معاملات</span><code>tval</code></button>
+        <button class="filter-data-block" type="button" data-block-name="حجم مبنا" data-block-code="bvol"><span>حجم مبنا</span><code>bvol</code></button>
+      </div>
+    </div>
+    <div class="filter-accordion-group">
+      <button class="filter-accordion-toggle" type="button" aria-expanded="false">اطلاعات قیمت <span>›</span></button>
+      <div class="filter-accordion-content" hidden>
+        <button class="filter-data-block" type="button" data-block-name="قیمت دیروز" data-block-code="py"><span>قیمت دیروز</span><code>py</code></button>
+        <button class="filter-data-block" type="button" data-block-name="اولین قیمت" data-block-code="pf"><span>اولین قیمت</span><code>pf</code></button>
+        <button class="filter-data-block" type="button" data-block-name="کمترین قیمت" data-block-code="pmin"><span>کمترین قیمت</span><code>pmin</code></button>
+        <button class="filter-data-block" type="button" data-block-name="بیشترین قیمت" data-block-code="pmax"><span>بیشترین قیمت</span><code>pmax</code></button>
+        <button class="filter-data-block" type="button" data-block-name="آخرین قیمت" data-block-code="pl"><span>آخرین قیمت</span><code>pl</code></button>
+        <button class="filter-data-block" type="button" data-block-name="تغییر آخرین قیمت" data-block-code="plc"><span>تغییر آخرین قیمت</span><code>plc</code></button>
+        <button class="filter-data-block" type="button" data-block-name="درصد تغییر آخرین قیمت" data-block-code="plp"><span>درصد تغییر آخرین قیمت</span><code>plp</code></button>
+        <button class="filter-data-block" type="button" data-block-name="قیمت پایانی" data-block-code="pc"><span>قیمت پایانی</span><code>pc</code></button>
+        <button class="filter-data-block" type="button" data-block-name="درصد تغییر قیمت پایانی" data-block-code="pcp"><span>درصد تغییر قیمت پایانی</span><code>pcp</code></button>
+        <button class="filter-data-block" type="button" data-block-name="آستانه مجاز پایین" data-block-code="tmin"><span>آستانه مجاز پایین</span><code>tmin</code></button>
+        <button class="filter-data-block" type="button" data-block-name="آستانه مجاز بالا" data-block-code="tmax"><span>آستانه مجاز بالا</span><code>tmax</code></button>
+      </div>
+    </div>
+    <div class="filter-accordion-group">
+      <button class="filter-accordion-toggle" type="button" aria-expanded="false">اطلاعات بنیادی و سرمایه <span>›</span></button>
+      <div class="filter-accordion-content" hidden>
+        <button class="filter-data-block" type="button" data-block-name="EPS" data-block-code="eps"><span>EPS</span><code>eps</code></button>
+        <button class="filter-data-block" type="button" data-block-name="P/E" data-block-code="pe"><span>P/E</span><code>pe</code></button>
+        <button class="filter-data-block" type="button" data-block-name="تعداد سهام" data-block-code="z"><span>تعداد سهام</span><code>z</code></button>
+        <button class="filter-data-block" type="button" data-block-name="ارزش بازار" data-block-code="mv"><span>ارزش بازار</span><code>mv</code></button>
+      </div>
+    </div>
+  </aside>
+  <aside class="filter-data-panel filter-client-panel" id="filterClientPanel" hidden aria-label="بلوک‌های حقیقی و حقوقی">
+    <div class="filter-data-panel-head"><strong>بلوک‌های حقیقی و حقوقی</strong><span>۱۴ بلوک</span></div>
+    <div class="filter-accordion-group">
+      <button class="filter-accordion-toggle" type="button" aria-expanded="true">داده‌های خام حقیقی و حقوقی <span>⌄</span></button>
+      <div class="filter-accordion-content">
+        <button class="filter-data-block" type="button" data-block-name="تعداد خریدار حقیقی" data-block-code="(ct).Buy_CountI"><span>تعداد خریدار حقیقی</span><code>Buy_CountI</code></button>
+        <button class="filter-data-block" type="button" data-block-name="تعداد خریدار حقوقی" data-block-code="(ct).Buy_CountN"><span>تعداد خریدار حقوقی</span><code>Buy_CountN</code></button>
+        <button class="filter-data-block" type="button" data-block-name="حجم خرید حقیقی" data-block-code="(ct).Buy_I_Volume"><span>حجم خرید حقیقی</span><code>Buy_I_Volume</code></button>
+        <button class="filter-data-block" type="button" data-block-name="حجم خرید حقوقی" data-block-code="(ct).Buy_N_Volume"><span>حجم خرید حقوقی</span><code>Buy_N_Volume</code></button>
+        <button class="filter-data-block" type="button" data-block-name="تعداد فروشنده حقیقی" data-block-code="(ct).Sell_CountI"><span>تعداد فروشنده حقیقی</span><code>Sell_CountI</code></button>
+        <button class="filter-data-block" type="button" data-block-name="تعداد فروشنده حقوقی" data-block-code="(ct).Sell_CountN"><span>تعداد فروشنده حقوقی</span><code>Sell_CountN</code></button>
+        <button class="filter-data-block" type="button" data-block-name="حجم فروش حقیقی" data-block-code="(ct).Sell_I_Volume"><span>حجم فروش حقیقی</span><code>Sell_I_Volume</code></button>
+        <button class="filter-data-block" type="button" data-block-name="حجم فروش حقوقی" data-block-code="(ct).Sell_N_Volume"><span>حجم فروش حقوقی</span><code>Sell_N_Volume</code></button>
+      </div>
+    </div>
+    <div class="filter-accordion-group">
+      <button class="filter-accordion-toggle" type="button" aria-expanded="false">فرمول‌های حقیقی <span>›</span></button>
+      <div class="filter-accordion-content" hidden>
+        <button class="filter-data-block" type="button" data-block-name="سرانه خرید حقیقی" data-block-code="((ct).Buy_I_Volume/(ct).Buy_CountI)*(pc)"><span>سرانه خرید حقیقی</span><code>BuyI/CountI*pc</code></button>
+        <button class="filter-data-block" type="button" data-block-name="قدرت خریدار حقیقی" data-block-code="((ct).Buy_I_Volume/(ct).Buy_CountI)/((ct).Sell_I_Volume/(ct).Sell_CountI)"><span>قدرت خریدار حقیقی</span><code>BuyerI/SellerI</code></button>
+        <button class="filter-data-block" type="button" data-block-name="ورود پول حقیقی" data-block-code="((ct).Buy_I_Volume-(ct).Sell_I_Volume)*(pc)"><span>ورود پول حقیقی</span><code>(BuyI-SellI)*pc</code></button>
+      </div>
+    </div>
+    <div class="filter-accordion-group">
+      <button class="filter-accordion-toggle" type="button" aria-expanded="false">فرمول‌های حقوقی <span>›</span></button>
+      <div class="filter-accordion-content" hidden>
+        <button class="filter-data-block" type="button" data-block-name="سرانه خرید حقوقی" data-block-code="((ct).Buy_N_Volume/(ct).Buy_CountN)*(pc)"><span>سرانه خرید حقوقی</span><code>BuyN/CountN*pc</code></button>
+        <button class="filter-data-block" type="button" data-block-name="قدرت خریدار حقوقی" data-block-code="((ct).Buy_N_Volume/(ct).Buy_CountN)/((ct).Sell_N_Volume/(ct).Sell_CountN)"><span>قدرت خریدار حقوقی</span><code>BuyerN/SellerN</code></button>
+        <button class="filter-data-block" type="button" data-block-name="ورود پول حقوقی" data-block-code="((ct).Buy_N_Volume-(ct).Sell_N_Volume)*(pc)"><span>ورود پول حقوقی</span><code>(BuyN-SellN)*pc</code></button>
+      </div>
+    </div>
+  </aside>
+  <aside class="filter-data-panel filter-supply-panel" id="filterSupplyPanel" hidden aria-label="بلوک‌های عرضه و تقاضا">
+    <div class="filter-data-panel-head"><strong>بلوک‌های عرضه و تقاضا</strong><span>۴ بخش</span></div>
+    <div class="filter-accordion-group">
+      <button class="filter-accordion-toggle" type="button" aria-expanded="true">تحلیل عرضه و تقاضا <span>⌄</span></button>
+      <div class="filter-accordion-content">
+        <button class="filter-data-block filter-configurable-block" type="button" data-block-name="برتری تقاضا در پنج ردیف" data-block-code="ORDERBOOK_DEMAND_SUPERIORITY" data-config-type="demand"><span>برتری تقاضا در پنج ردیف</span><code>۵ ردیف</code></button>
+        <button class="filter-data-block filter-configurable-block" type="button" data-block-name="جمع شدن صف فروش" data-block-code="SELL_QUEUE_DRAINING" data-config-type="queue"><span>جمع شدن صف فروش</span><code>صف فروش</code></button>
+      </div>
+    </div>
+    <div class="filter-accordion-group smart-money-group">
+      <button class="filter-accordion-toggle" type="button" aria-expanded="true">فیلترهای پول هوشمند <span>⌄</span></button>
+      <div class="filter-accordion-content">
+        <button class="filter-data-block filter-configurable-block smart-money-composite" type="button" data-block-name="ورود پول هوشمند" data-block-code="SMART_MONEY_IN" data-config-type="smartIn"><span>ورود پول هوشمند</span><code>افزودن بلوک به صفحه</code></button>
+        <button class="filter-data-block filter-configurable-block smart-money-composite smart-money-out" type="button" data-block-name="خروج پول هوشمند" data-block-code="SMART_MONEY_OUT" data-config-type="smartOut"><span>خروج پول هوشمند</span><code>افزودن بلوک به صفحه</code></button>
+      </div>
+    </div>
+    <div class="filter-note">برای افزودن، یکی از دو بلوک را انتخاب کن. پس از قرارگرفتن روی صفحه، با لمس خود بلوک پنجره تنظیمات آن باز می‌شود. تاریخ انتخابی مربوط به همان یک روز است و میانگین‌گیری چندروزه انجام نمی‌شود. واکشی تاریخی TSETMC در این نسخه هنوز به سرویس متصل نشده است.</div>
+
+  </aside>
+  <aside class="filter-data-panel filter-calc-panel" id="filterCalcPanel" hidden aria-label="بلوک‌های محاسبه">
+    <div class="filter-data-panel-head"><strong>بلوک‌های محاسبه</strong><span>۴ گروه</span></div>
+    <div class="filter-accordion-group">
+      <button class="filter-accordion-toggle" type="button" aria-expanded="true">عملگرهای مقایسه <span>⌄</span></button>
+      <div class="filter-accordion-content">
+        <button class="filter-data-block" type="button" data-block-name="کوچک‌تر" data-block-code="&lt;"><span>کوچک‌تر</span><code>&lt;</code></button>
+        <button class="filter-data-block" type="button" data-block-name="بزرگ‌تر" data-block-code="&gt;"><span>بزرگ‌تر</span><code>&gt;</code></button>
+        <button class="filter-data-block" type="button" data-block-name="کوچک‌تر یا مساوی" data-block-code="&lt;="><span>کوچک‌تر یا مساوی</span><code>&lt;=</code></button>
+        <button class="filter-data-block" type="button" data-block-name="بزرگ‌تر یا مساوی" data-block-code="&gt;="><span>بزرگ‌تر یا مساوی</span><code>&gt;=</code></button>
+        <button class="filter-data-block" type="button" data-block-name="مساوی" data-block-code="=="><span>مساوی</span><code>==</code></button>
+        <button class="filter-data-block" type="button" data-block-name="نامساوی" data-block-code="!="><span>نامساوی</span><code>!=</code></button>
+      </div>
+    </div>
+    <div class="filter-accordion-group">
+      <button class="filter-accordion-toggle" type="button" aria-expanded="true">عملگرهای ریاضی <span>⌄</span></button>
+      <div class="filter-accordion-content">
+        <button class="filter-data-block" type="button" data-block-name="جمع" data-block-code="+"><span>جمع</span><code>+</code></button>
+        <button class="filter-data-block" type="button" data-block-name="تفریق" data-block-code="-"><span>تفریق</span><code>-</code></button>
+        <button class="filter-data-block" type="button" data-block-name="ضرب" data-block-code="*"><span>ضرب</span><code>*</code></button>
+        <button class="filter-data-block" type="button" data-block-name="تقسیم" data-block-code="/"><span>تقسیم</span><code>/</code></button>
+        <button class="filter-data-block" type="button" data-block-name="باقیمانده" data-block-code="%"><span>باقیمانده</span><code>%</code></button>
+      </div>
+    </div>
+    <div class="filter-accordion-group">
+      <button class="filter-accordion-toggle" type="button" aria-expanded="true">عملگرهای منطقی <span>⌄</span></button>
+      <div class="filter-accordion-content">
+        <button class="filter-data-block" type="button" data-block-name="و" data-block-code="&amp;&amp;"><span>و</span><code>&amp;&amp;</code></button>
+        <button class="filter-data-block" type="button" data-block-name="یا" data-block-code="||"><span>یا</span><code>||</code></button>
+        <button class="filter-data-block" type="button" data-block-name="نقیض" data-block-code="!"><span>نقیض</span><code>!</code></button>
+      </div>
+    </div>
+    <div class="filter-accordion-group">
+      <button class="filter-accordion-toggle" type="button" aria-expanded="true">امکانات تکمیلی <span>⌄</span></button>
+      <div class="filter-accordion-content">
+        <button class="filter-data-block" type="button" data-block-name="پرانتز باز" data-block-code="("><span>پرانتز باز</span><code>(</code></button>
+        <button class="filter-data-block" type="button" data-block-name="پرانتز بسته" data-block-code=")"><span>پرانتز بسته</span><code>)</code></button>
+        <button class="filter-data-block" type="button" data-block-name="توان" data-block-code="Math.pow"><span>توان</span><code>Math.pow</code></button>
+        <button class="filter-data-block" type="button" data-block-name="قدر مطلق" data-block-code="Math.abs"><span>قدر مطلق</span><code>Math.abs</code></button>
+        <button class="filter-data-block" type="button" data-block-name="عدد / مقدار ثابت" data-block-code="__CONSTANT__"><span>انتخاب عدد و مقدار ثابت</span><code>عدد</code></button>
+      </div>
+    </div>
+    <div class="filter-note">هر عملگر به‌صورت یک بلوک مستقل به محیط طراحی اضافه می‌شود. برای عدد یا مقدار ثابت، پس از انتخاب، مقدار دلخواه را وارد کن.</div>
+  </aside>
+  <aside class="filter-data-panel filter-average-panel" id="filterAveragePanel" hidden aria-label="بلوک میانگین">
+    <div class="filter-data-panel-head"><strong>بلوک میانگین</strong><span>آماده تنظیم</span></div>
+    <div class="filter-note">فعلاً فقط جایگاه بلوک میانگین ایجاد شده است؛ پس از مشخص‌شدن تنظیمات، گزینه‌ها و عملکرد آن را اضافه می‌کنیم.</div>
+  </aside>
+  <aside class="filter-data-panel filter-output-panel" id="filterOutputPanel" hidden aria-label="بلوک‌های خروجی">
+    <div class="filter-data-panel-head"><strong>بلوک‌های خروجی دیده‌بان</strong><span>۲۰ خروجی</span></div>
+    <div class="filter-note">یکی از خروجی‌های cfield را انتخاب کن تا بلوک آن به محیط طراحی اضافه شود. این بلوک‌ها فعلاً جایگاه تخصیص خروجی هستند؛ اتصال به اجرای واقعی فیلتر و نمایش نتیجه در دیده‌بان در مرحله بعد انجام می‌شود.</div>
+    <div class="filter-output-grid"><button class="filter-data-block" type="button" data-block-name="خروجی cfield0" data-block-code="cfield0" data-output-field="cfield0"><span>خروجی 0</span><code>cfield0</code></button><button class="filter-data-block" type="button" data-block-name="خروجی cfield1" data-block-code="cfield1" data-output-field="cfield1"><span>خروجی 1</span><code>cfield1</code></button><button class="filter-data-block" type="button" data-block-name="خروجی cfield2" data-block-code="cfield2" data-output-field="cfield2"><span>خروجی 2</span><code>cfield2</code></button><button class="filter-data-block" type="button" data-block-name="خروجی cfield3" data-block-code="cfield3" data-output-field="cfield3"><span>خروجی 3</span><code>cfield3</code></button><button class="filter-data-block" type="button" data-block-name="خروجی cfield4" data-block-code="cfield4" data-output-field="cfield4"><span>خروجی 4</span><code>cfield4</code></button><button class="filter-data-block" type="button" data-block-name="خروجی cfield5" data-block-code="cfield5" data-output-field="cfield5"><span>خروجی 5</span><code>cfield5</code></button><button class="filter-data-block" type="button" data-block-name="خروجی cfield6" data-block-code="cfield6" data-output-field="cfield6"><span>خروجی 6</span><code>cfield6</code></button><button class="filter-data-block" type="button" data-block-name="خروجی cfield7" data-block-code="cfield7" data-output-field="cfield7"><span>خروجی 7</span><code>cfield7</code></button><button class="filter-data-block" type="button" data-block-name="خروجی cfield8" data-block-code="cfield8" data-output-field="cfield8"><span>خروجی 8</span><code>cfield8</code></button><button class="filter-data-block" type="button" data-block-name="خروجی cfield9" data-block-code="cfield9" data-output-field="cfield9"><span>خروجی 9</span><code>cfield9</code></button><button class="filter-data-block" type="button" data-block-name="خروجی cfield10" data-block-code="cfield10" data-output-field="cfield10"><span>خروجی 10</span><code>cfield10</code></button><button class="filter-data-block" type="button" data-block-name="خروجی cfield11" data-block-code="cfield11" data-output-field="cfield11"><span>خروجی 11</span><code>cfield11</code></button><button class="filter-data-block" type="button" data-block-name="خروجی cfield12" data-block-code="cfield12" data-output-field="cfield12"><span>خروجی 12</span><code>cfield12</code></button><button class="filter-data-block" type="button" data-block-name="خروجی cfield13" data-block-code="cfield13" data-output-field="cfield13"><span>خروجی 13</span><code>cfield13</code></button><button class="filter-data-block" type="button" data-block-name="خروجی cfield14" data-block-code="cfield14" data-output-field="cfield14"><span>خروجی 14</span><code>cfield14</code></button><button class="filter-data-block" type="button" data-block-name="خروجی cfield15" data-block-code="cfield15" data-output-field="cfield15"><span>خروجی 15</span><code>cfield15</code></button><button class="filter-data-block" type="button" data-block-name="خروجی cfield16" data-block-code="cfield16" data-output-field="cfield16"><span>خروجی 16</span><code>cfield16</code></button><button class="filter-data-block" type="button" data-block-name="خروجی cfield17" data-block-code="cfield17" data-output-field="cfield17"><span>خروجی 17</span><code>cfield17</code></button><button class="filter-data-block" type="button" data-block-name="خروجی cfield18" data-block-code="cfield18" data-output-field="cfield18"><span>خروجی 18</span><code>cfield18</code></button><button class="filter-data-block" type="button" data-block-name="خروجی cfield19" data-block-code="cfield19" data-output-field="cfield19"><span>خروجی 19</span><code>cfield19</code></button></div>
+  </aside>
+  <div class="filter-blocks-workspace" id="filterBlocksWorkspace"><div class="filter-workspace-placeholder" id="filterWorkspaceHint">انتخاب بلوک از پنل داده، آن را اینجا می‌سازد.<br>برای اتصال، خروجی یک بلوک را لمس کن سپس ورودی بلوک دیگر را.</div><svg class="filter-wires" id="filterWires" aria-label="اتصالات بلوک‌ها"></svg></div>
+</div>
+</section></div>
+<div aria-hidden="true" class="symbol-modal-backdrop" id="symbolModal">
+<section aria-labelledby="symbolModalTitle" aria-modal="true" class="symbol-modal" role="dialog">
+<div class="symbol-modal-head"><h3 id="symbolModalTitle">جزئیات نماد</h3><button class="symbol-modal-close" id="closeSymbolModal" type="button">بستن ✕</button></div>
+<div class="symbol-detail-grid" id="symbolDetailGrid"></div>
+<h4>اطلاعات حقیقی و حقوقی</h4>
+<div class="symbol-detail-grid" id="symbolOwnership"></div>
+<h4>پنج ردیف سفارش خرید و فروش</h4>
+<div class="table-wrap"><table class="orderbook"><thead><tr><th>خرید</th><th>حجم خرید</th><th>تعداد</th><th>فروش</th><th>حجم فروش</th><th>تعداد</th></tr></thead><tbody id="symbolOrderbook"></tbody></table></div>
+<div class="detail-disclaimer">توجه: قیمت و اطلاعات اصلی از ردیف انتخاب‌شده خوانده می‌شود؛ اطلاعات تکمیلی، حقیقی/حقوقی و سفارش‌ها در این مرحله نمونه و نمایشی هستند و هنوز به داده زنده متصل نیستند.</div>
+</section>
+</div>
+
+</main><footer><span>● پیش‌نمایش طراحی صفحه اصلی</span><span>بورس تهران | فرابورس ایران | بازار پایه</span><span id="clock">نسخه آزمایشی ۰٫۱</span></footer>
+<script>
+(function(){
+  const timeEl = document.getElementById('marketTime');
+  const dotEl = document.getElementById('marketDot');
+  const labelEl = document.getElementById('marketLabel');
+  const tehranFormatter = new Intl.DateTimeFormat('en-GB', {
+    timeZone: 'Asia/Tehran', hour: '2-digit', minute: '2-digit',
+    second: '2-digit', hour12: false
+  });
+  const partsFormatter = new Intl.DateTimeFormat('en-US', {
+    timeZone: 'Asia/Tehran', weekday: 'short', hour: '2-digit',
+    minute: '2-digit', hourCycle: 'h23'
+  });
+
+  function updateMarketClock(){
+    const now = new Date();
+    const parts = {};
+    partsFormatter.formatToParts(now).forEach(p => { parts[p.type] = p.value; });
+    const weekday = parts.weekday;
+    const hour = Number(parts.hour);
+    const minute = Number(parts.minute);
+    const minuteOfDay = hour * 60 + minute;
+
+    // پیش‌گشایش: 08:45 تا 09:00؛ معاملات پیوسته: 09:00 تا 12:30، شنبه تا چهارشنبه.
+    // تعطیلات رسمی و توقف‌های موردی از منبع زنده بررسی نمی‌شوند.
+    const tradingDay = ['Sat','Sun','Mon','Tue','Wed'].includes(weekday);
+    const preOpen = tradingDay && minuteOfDay >= 525 && minuteOfDay < 540;
+    const marketOpen = tradingDay && minuteOfDay >= 540 && minuteOfDay < 750;
+
+    timeEl.textContent = tehranFormatter.format(now);
+    dotEl.classList.toggle('open', marketOpen);
+    dotEl.classList.toggle('preopen', preOpen);
+    dotEl.classList.toggle('closed', !marketOpen && !preOpen);
+    labelEl.textContent = marketOpen ? 'بازار باز است' : (preOpen ? 'پیش‌گشایش' : 'بازار بسته است');
+  }
+
+  updateMarketClock();
+  setInterval(updateMarketClock, 1000);
+})();
+</script>
+<script>
+
+(function(){
+ const body=document.getElementById('templateRows'); if(!body)return;
+ const data=['نماد','حجم معامله','آخرین قیمت','آخرین قیمت - درصد','قیمت پایانی','قیمت پایانی - درصد',...Array.from({length:20},(_,i)=>'cfield'+i)];
+ const aligns=['وسط چین','چپ چین','راست چین'], colors=['سیاه','سفید','سبز','قرمز','آبی','زرد'], bgs=['بدون رنگ','قرمز','آبی','سبز','زرد','خاکستری'], borders=['سمت راست','بدون خط','کامل','سمت چپ'];
+ const defs=[['نماد','نماد','وسط چین','سفید','قرمز',50],['حجم','حجم معامله','وسط چین','سفید','آبی',60],['آخرین','آخرین قیمت','وسط چین','سفید','سبز',50],['درصد','آخرین قیمت - درصد','وسط چین','سفید','قرمز',50],['پایانی','قیمت پایانی','وسط چین','سفید','آبی',50],['درصد','قیمت پایانی - درصد','وسط چین','سفید','سبز',50],...Array.from({length:20},(_,i)=>['cfield'+i,'cfield'+i,'وسط چین','سفید','بدون رنگ',70])];
+ const esc=s=>String(s??'').replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
+ const opts=(a,v)=>a.map(x=>`<option ${x===v?'selected':''}>${x}</option>`).join('');
+ function row(i,r){let [t,d,a,c,b,w,st,bd]=r;return `<tr><td>${i+1}</td><td><input class="title-input" value="${esc(t)}"></td><td><select class="data-select">${opts(data,d||'نماد')}</select></td><td><select>${opts(aligns,a||'وسط چین')}</select></td><td><select>${opts(colors,c||'سفید')}</select></td><td><select>${opts(bgs,b||'بدون رنگ')}</select></td><td><input class="width-input" type="number" min="20" max="1000" value="${Number(w)||50}"></td><td><select>${opts(['Normal','Bold','Italic'],st||'Normal')}</select></td><td><select>${opts(borders,bd||'سمت راست')}</select></td></tr>`}
+ function render(rows,n){body.innerHTML=Array.from({length:26},(_,i)=>row(i,rows[i]||['','نماد','وسط چین','سفید','بدون رنگ',50])).join('');}
+ function collect(){return [...body.querySelectorAll('tr')].map(tr=>[...tr.querySelectorAll('input,select')].map(x=>x.value))}
+ function saved(){try{return JSON.parse(localStorage.getItem('rrs_personal_templates')||'[]')}catch(e){return []}}
+ function refresh(){let box=document.getElementById('savedTemplateList'),a=saved();box.innerHTML=a.length?a.map((t,i)=>`<div class="saved-template-item"><b>${esc(t.name)}</b><button data-load="${i}">بارگذاری</button><button class="delete" data-del="${i}">حذف</button></div>`).join(''):'<span class="muted">هنوز قالبی ذخیره نشده است.</span>'}
+ render(defs,26);refresh();
+ const modal=document.getElementById('templateModal');
+ function openTemplate(){modal.classList.add('open');modal.setAttribute('aria-hidden','false');document.body.style.overflow='hidden';}
+ function closeTemplate(){modal.classList.remove('open');modal.setAttribute('aria-hidden','true');document.body.style.overflow=document.querySelector('.template-modal-backdrop.open,.symbol-modal-backdrop.open')?'hidden':'';}
+ function applyWatchTemplate(config){
+   const table=document.getElementById('watchTable'); if(!table)return;
+   const defs=config.columns||[], count=Math.max(1,Math.min(26,Number(config.columnCount)||8));
+   const selected=defs.slice(0,count); const head=table.querySelector('thead tr');
+   const bodyRows=[...table.querySelectorAll('tbody tr')];
+   const fieldMap={'نماد':0,'حجم معامله':3,'آخرین قیمت':1,'آخرین قیمت - درصد':2,'قیمت پایانی':1,'قیمت پایانی - درصد':2};
+   head.innerHTML=selected.map(c=>`<th>${esc(c[0]||c[1]||'ستون')}</th>`).join('');
+   bodyRows.forEach(tr=>{const old=[...tr.children];tr.innerHTML=selected.map(c=>{let idx=fieldMap[c[1]];let cell=idx===undefined?(c[1]||'').startsWith('cfield')?'—':null:old[idx]?.textContent;return `<td>${esc(cell===null?'—':cell)}</td>`}).join('');});
+   table.classList.add('customized'); table.style.fontSize=(Number(config.fontSize)||12)+'px';
+   table.querySelectorAll('tr').forEach(tr=>[...tr.children].forEach((el,col)=>{const c=selected[col]||[];const align={'وسط چین':'center','چپ چین':'left','راست چین':'right'}[c[2]]||'center';const color={'سیاه':'#111827','سفید':'#edf4ff','سبز':'#00d878','قرمز':'#ff465b','آبی':'#168bff','زرد':'#ffbd35'}[c[3]];const bg={'قرمز':'#642431','آبی':'#123c68','سبز':'#0b4935','زرد':'#665019','خاکستری':'#39485b'}[c[4]];el.style.textAlign=align;el.style.fontSize=(Number(config.fontSize)||12)+'px';el.style.height=(Number(config.rowHeight)||40)+'px';el.style.width=(Number(c[5])||80)+'px';el.style.fontWeight=c[6]==='Bold'?'bold':'normal';el.style.fontStyle=c[6]==='Italic'?'italic':'normal';el.style.color=color||'';el.style.backgroundColor=bg||'';el.style.borderRight=c[7]==='بدون خط'?'0':c[7]==='کامل'?'1px solid #49617e':'';}));
+   localStorage.setItem('rrs_active_personal_template',JSON.stringify(config));
+ }
+ document.getElementById('applyTemplate').addEventListener('click',()=>{
+   const config={name:document.getElementById('templateName').value.trim()||'قالب بدون نام',columns:collect(),fontSize:+document.getElementById('fontSize').value||12,rowHeight:+document.getElementById('rowHeight').value||40,columnCount:Math.max(1,Math.min(26,+document.getElementById('columnCount').value||8))};
+   applyWatchTemplate(config);
+   document.getElementById('templateFeedback').textContent='قالب روی دیده‌بان اعمال شد.';
+   closeTemplate();
+ });
+ try{const active=JSON.parse(localStorage.getItem('rrs_active_personal_template')||'null');if(active)applyWatchTemplate(active)}catch(e){}
+ function applySizing(){document.querySelectorAll('.template-table th,.template-table td').forEach(el=>{el.style.fontSize=(+document.getElementById('fontSize').value||12)+'px';el.style.height=(+document.getElementById('rowHeight').value||40)+'px';})}
+ applySizing();
+ document.getElementById('fontSize').addEventListener('change',applySizing);
+ document.getElementById('rowHeight').addEventListener('change',applySizing);
+ document.getElementById('columnCount').addEventListener('change',()=>{document.getElementById('templateFeedback').textContent='تعداد ستون‌های قالب ثبت شد.';});
+ document.getElementById('saveTemplate').addEventListener('click',()=>{let name=document.getElementById('templateName').value.trim()||'قالب بدون نام',a=saved(),v={name,columns:collect(),fontSize:+document.getElementById('fontSize').value||12,rowHeight:+document.getElementById('rowHeight').value||40,columnCount:Math.max(1,Math.min(26,+document.getElementById('columnCount').value||8))},i=a.findIndex(x=>x.name===name);if(i<0)a.push(v);else a[i]=v;localStorage.setItem('rrs_personal_templates',JSON.stringify(a));refresh();document.getElementById('templateFeedback').textContent='قالب ذخیره شد.'});
+ document.getElementById('savedTemplateList').addEventListener('click',e=>{let a=saved(),l=e.target.closest('[data-load]'),d=e.target.closest('[data-del]');if(l){let t=a[+l.dataset.load];document.getElementById('templateName').value=t.name;document.getElementById('fontSize').value=t.fontSize;document.getElementById('rowHeight').value=t.rowHeight;document.getElementById('columnCount').value=t.columnCount||8;render(t.columns,26);applySizing();document.getElementById('templateFeedback').textContent='قالب بارگذاری شد.'}if(d){a.splice(+d.dataset.del,1);localStorage.setItem('rrs_personal_templates',JSON.stringify(a));refresh()}});
+})();
+
+</script>
+<script>
+(function(){
+ const table=document.getElementById('watchTable');
+ const modal=document.getElementById('symbolModal');
+ if(!table||!modal)return;
+ const faNum=n=>Number(n).toLocaleString('fa-IR');
+ const cell=(label,value,cls='')=>`<div class="symbol-detail"><span>${label}</span><strong class="${cls}">${value}</strong></div>`;
+ const demoBook=[
+  ['۳٬۲۳۵','۲۴۵٬۰۰۰','۱۸','۳٬۲۴۵','۱۸۰٬۰۰۰','۱۲'],
+  ['۳٬۲۳۰','۳۱۰٬۰۰۰','۲۲','۳٬۲۵۰','۲۷۰٬۰۰۰','۱۷'],
+  ['۳٬۲۲۵','۱۸۰٬۰۰۰','۱۴','۳٬۲۵۵','۳۳۰٬۰۰۰','۲۱'],
+  ['۳٬۲۲۰','۴۲۰٬۰۰۰','۲۹','۳٬۲۶۰','۲۱۰٬۰۰۰','۱۵'],
+  ['۳٬۲۱۵','۱۵۰٬۰۰۰','۱۱','۳٬۲۶۵','۱۹۰٬۰۰۰','۱۳']
+ ];
+ function openForRow(tr){
+  const vals=[...tr.cells].map(x=>x.textContent.trim());
+  const symbol=vals[0]||'نماد انتخابی';
+  document.getElementById('symbolModalTitle').textContent='جزئیات نماد '+symbol;
+  const change=vals[2]||'—';
+  const cls=/▼|−|-/.test(change)?'down':'up';
+  document.getElementById('symbolDetailGrid').innerHTML=[
+   cell('آخرین قیمت',vals[1]||'—'),cell('درصد تغییر',change,cls),
+   cell('حجم معاملات',vals[3]||'—'),cell('قدرت خریدار',vals[4]||'—'),
+   cell('قیمت پایانی','۳٬۲۲۸'),cell('ارزش معاملات','۱٬۰۵۶ میلیارد ریال'),
+   cell('تعداد معاملات','۱۲٬۴۸۰'),cell('وضعیت نماد','مجاز','up')
+  ].join('');
+  document.getElementById('symbolOwnership').innerHTML=[
+   cell('خالص خرید حقیقی','+ ۲۸٫۵ میلیارد ریال','up'),cell('خرید حقیقی','۶۸٪','up'),
+   cell('فروش حقیقی','۵۴٪','down'),cell('قدرت خرید حقیقی','۱٫۴','up')
+  ].join('');
+  document.getElementById('symbolOrderbook').innerHTML=demoBook.map(r=>`<tr><td class="buy">${r[0]}</td><td>${r[1]}</td><td>${r[2]}</td><td class="sell">${r[3]}</td><td>${r[4]}</td><td>${r[5]}</td></tr>`).join('');
+  modal.classList.add('open');modal.setAttribute('aria-hidden','false');document.body.style.overflow='hidden';
+ }
+ function close(){modal.classList.remove('open');modal.setAttribute('aria-hidden','true');document.body.style.overflow=document.querySelector('.template-modal-backdrop.open,.symbol-modal-backdrop.open')?'hidden':'';}
+ table.querySelector('tbody').addEventListener('click',e=>{const tr=e.target.closest('tr');if(tr)openForRow(tr);});
+ document.getElementById('closeSymbolModal').addEventListener('click',close);
+ modal.addEventListener('click',e=>{if(e.target===modal)close();});
+ document.addEventListener('keydown',e=>{if(e.key==='Escape'&&modal.classList.contains('open'))close();});
+ function exportTable(kind){
+  const rows=[...table.querySelectorAll('tr')].map(tr=>[...tr.children].map(td=>td.innerText.replace(/\s+/g,' ').trim()));
+  const stamp=new Date().toISOString().slice(0,10);
+  if(kind==='csv'){
+   const csv='\uFEFF'+rows.map(row=>row.map(v=>'"'+v.replace(/"/g,'""')+'"').join(',')).join('\r\n');
+   const blob=new Blob([csv],{type:'text/csv;charset=utf-8;'});download(blob,`rasool_raisi_watch_${stamp}.csv`);
+  }else{
+   const html=`<html><head><meta charset="utf-8">
+<style>
+.filter-modal-backdrop{position:fixed;inset:0;width:100vw;height:100dvh;z-index:12000;background:rgba(2,9,20,.96);display:none;align-items:stretch;justify-content:stretch;padding:env(safe-area-inset-top,0px) 0 env(safe-area-inset-bottom,0px)}
+.filter-modal-backdrop.open{display:flex}.filter-modal{width:100%;height:100%;min-height:0;background:#071426;display:flex;flex-direction:column;overflow:hidden;padding:8px 10px calc(10px + env(safe-area-inset-bottom,0px))}
+.filter-modal-head{position:sticky;top:0;z-index:5;flex:0 0 auto;min-height:54px;display:flex;align-items:center;justify-content:space-between;gap:10px;background:#071426;border-bottom:1px solid var(--line);padding:4px 0 10px}
+.filter-modal-head strong{color:var(--gold);font-size:16px}.filter-modal-close{min-width:78px;min-height:44px;border:1px solid #a44b58;background:#642431;color:#fff;border-radius:8px;font:600 13px Tahoma;touch-action:manipulation}
+.filter-modal-empty{flex:1;min-height:0;display:flex;align-items:center;justify-content:center;text-align:center;color:var(--muted);font-size:14px;line-height:2;padding:20px}
+@media(max-width:600px){.filter-modal{padding:7px 9px calc(9px + env(safe-area-inset-bottom,0px))}.filter-modal-head{min-height:54px}.filter-modal-head strong{font-size:14px}.filter-modal-close{min-height:44px;font-size:12px}}
+
+/* V22: fit all template editor columns in the phone viewport */
+@media(max-width:700px){
+  .template-inline-builder .template-table-wrap{overflow-x:hidden!important;width:100%!important;}
+  .template-inline-builder .template-table{width:100%!important;min-width:0!important;max-width:100%!important;table-layout:fixed!important;border-collapse:collapse!important;}
+  .template-inline-builder .template-table th,.template-inline-builder .template-table td{min-width:0!important;width:auto!important;padding:3px 1px!important;font-size:clamp(6px,1.75vw,8px)!important;white-space:normal!important;overflow:hidden!important;overflow-wrap:anywhere!important;}
+  .template-inline-builder .template-table th:nth-child(1),.template-inline-builder .template-table td:nth-child(1){width:4%!important}
+  .template-inline-builder .template-table th:nth-child(2),.template-inline-builder .template-table td:nth-child(2){width:15%!important}
+  .template-inline-builder .template-table th:nth-child(3),.template-inline-builder .template-table td:nth-child(3){width:17%!important}
+  .template-inline-builder .template-table th:nth-child(4),.template-inline-builder .template-table td:nth-child(4){width:9%!important}
+  .template-inline-builder .template-table th:nth-child(5),.template-inline-builder .template-table td:nth-child(5){width:12%!important}
+  .template-inline-builder .template-table th:nth-child(6),.template-inline-builder .template-table td:nth-child(6){width:12%!important}
+  .template-inline-builder .template-table th:nth-child(7),.template-inline-builder .template-table td:nth-child(7){width:8%!important}
+  .template-inline-builder .template-table th:nth-child(8),.template-inline-builder .template-table td:nth-child(8){width:11%!important}
+  .template-inline-builder .template-table th:nth-child(9),.template-inline-builder .template-table td:nth-child(9){width:12%!important}
+  .template-inline-builder .template-table input,.template-inline-builder .template-table select{width:100%!important;min-width:0!important;max-width:100%!important;box-sizing:border-box!important;padding:3px 1px!important;font-size:clamp(6px,1.7vw,8px)!important;min-height:27px!important;height:auto!important;}
+  .template-inline-builder .template-table .title-input,.template-inline-builder .template-table .data-select,.template-inline-builder .template-table .color-select,.template-inline-builder .template-table .width-input{min-width:0!important;width:100%!important;}
+  .template-inline-builder .template-table th{line-height:1.25!important;}
+}
+@media(max-width:390px){
+ .template-inline-builder .template-table th,.template-inline-builder .template-table td{font-size:6px!important;padding:2px 0!important}
+ .template-inline-builder .template-table input,.template-inline-builder .template-table select{font-size:6px!important;min-height:24px!important;padding:2px 0!important}
+}
+
+</style>
+</head><body><table border="1">'+rows.map((r,i)=>'<tr>'+r.map(v=>i===0?'<th>'+escapeHtml(v)+'</th>':'<td>'+escapeHtml(v)+'</td>').join('')+'</tr>').join('')+'</table>
+<script>
+(function(){
+ const tab=document.getElementById('filterDataTab');
+ const panel=document.getElementById('filterDataPanel');
+ if(!tab||!panel)return;
+ tab.addEventListener('click',()=>{
+   const opening=panel.hidden;
+   panel.hidden=!opening;
+   tab.setAttribute('aria-expanded',String(opening));
+ });
+ document.querySelectorAll('#filter .filter-accordion-toggle').forEach(btn=>{
+   btn.addEventListener('click',()=>{
+     const body=btn.nextElementSibling;
+     const opening=body.hidden;
+     body.hidden=!opening;
+     btn.setAttribute('aria-expanded',String(opening));
+     const marker=btn.querySelector('span'); if(marker)marker.textContent=opening?'⌄':'›';
+   });
+ });
+ document.querySelectorAll('#filter .filter-data-block').forEach(block=>{
+   block.addEventListener('click',()=>{
+     document.querySelectorAll('#filter .filter-data-block.selected').forEach(x=>x.classList.remove('selected'));
+     block.classList.add('selected');
+   });
+ });
+})();
+<\/script>
+
+</body></html>`;
+   const blob=new Blob(['\uFEFF',html],{type:'application/vnd.ms-excel;charset=utf-8;'});download(blob,`rasool_raisi_watch_${stamp}.xls`);
+  }
+ }
+ function escapeHtml(v){return String(v).replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));}
+ function download(blob,name){const url=URL.createObjectURL(blob),a=document.createElement('a');a.href=url;a.download=name;document.body.appendChild(a);a.click();a.remove();setTimeout(()=>URL.revokeObjectURL(url),1200);}
+ document.getElementById('exportCSV').addEventListener('click',()=>exportTable('csv'));
+ document.getElementById('exportExcel').addEventListener('click',()=>exportTable('excel'));
+})();
+</script>
+
+<script>
+(function(){
+ const links=[...document.querySelectorAll('.section-nav [data-main-tab]')];
+ const panels={watch:document.getElementById('watch'),indices:document.getElementById('indices'),template:document.getElementById('template'),filter:document.getElementById('filter')};
+ function showBase(name){
+   links.forEach(a=>a.classList.toggle('active',a.dataset.mainTab===name));
+   Object.entries(panels).forEach(([k,el])=>{if(el)el.hidden=k!==name;});
+ }
+ links.forEach(a=>a.addEventListener('click',function(e){e.preventDefault();showBase(this.dataset.mainTab);}));
+})();
+</script>
+
+<script>
+// V28: floating data drawer, scrollable canvas, reliable tap-to-connect and delete modes; filter section only
+(function(){
+ const tab=document.getElementById('filterDataTab'),panel=document.getElementById('filterDataPanel');
+ const clientTab=document.getElementById('filterClientTab'),clientPanel=document.getElementById('filterClientPanel');
+ const supplyTab=document.getElementById('filterSupplyTab'),supplyPanel=document.getElementById('filterSupplyPanel');
+ const calcTab=document.getElementById('filterCalcTab'),calcPanel=document.getElementById('filterCalcPanel');
+ const averageTab=document.getElementById('filterAverageTab'),averagePanel=document.getElementById('filterAveragePanel');
+ const outputTab=document.getElementById('filterOutputTab'),outputPanel=document.getElementById('filterOutputPanel');
+ // V30 FIX: bind panel and accordion controls on the actual filter page (not inside export HTML).
+ const panelPairs=[[tab,panel],[clientTab,clientPanel],[supplyTab,supplyPanel],[calcTab,calcPanel],[averageTab,averagePanel],[outputTab,outputPanel]];
+ panelPairs.forEach(([button,body])=>{if(!button||!body)return;button.addEventListener('click',()=>{
+   const opening=body.hidden;
+   panelPairs.forEach(([otherButton,otherBody])=>{if(!otherBody)return;otherBody.hidden=true;if(otherButton)otherButton.setAttribute('aria-expanded','false');});
+   body.hidden=!opening;button.setAttribute('aria-expanded',String(opening));
+ });});
+ document.querySelectorAll('#filter .filter-accordion-toggle').forEach(button=>{
+   const body=button.nextElementSibling;if(!body)return;
+   button.setAttribute('aria-expanded',String(!body.hidden));
+   const marker=button.querySelector('span');if(marker)marker.textContent=body.hidden?'›':'⌄';
+   button.addEventListener('click',()=>{const opening=body.hidden;body.hidden=!opening;button.setAttribute('aria-expanded',String(opening));if(marker)marker.textContent=opening?'⌄':'›';});
+ });
+ const ws=document.getElementById('filterBlocksWorkspace'),svg=document.getElementById('filterWires');
+ const eraser=document.getElementById('filterEraserTab'),connectBtn=document.getElementById('filterConnectTab'),hint=document.getElementById('filterWorkspaceHint');
+ if(!tab||!panel||!ws||!svg||!eraser||!connectBtn)return;
+ const canvas=document.createElement('div');canvas.className='filter-canvas';canvas.id='filterCanvas';
+ ws.insertBefore(canvas,svg);canvas.appendChild(svg);svg.style.width='900px';svg.style.height='900px';svg.style.inset='auto';svg.style.left='0';svg.style.top='0';
+ let nodeId=0,wireCounter=0,nodes=[],wires=[],selectedNode=null,selectedWire=null,deleteMode=false,connectMode=false,connectFrom=null;
+ const smartModal=document.createElement('div');smartModal.className='smart-config-backdrop';smartModal.innerHTML='<section class="smart-config-dialog" role="dialog" aria-modal="true"><h3 id="smartConfigTitle">تنظیمات بلوک</h3><label id="smartPerLabel">حداقل سرانه حقیقی (تومان)</label><input id="smartPer" type="number" min="0" step="1000000"><label id="smartPowerLabel">حداقل قدرت حقیقی</label><input id="smartPower" type="number" min="0.1" step="0.1"><label>تعیین روز مورد بررسی</label><select id="smartDateMode"><option value="today">امروز</option><option value="days">چند روز کاری قبل</option><option value="months">چند ماه قبل</option><option value="custom">تاریخ شمسی دقیق</option></select><div id="smartDateValueWrap"><label id="smartDateValueLabel">تعداد روز کاری قبل</label><input id="smartDateValue" type="number" min="0" value="1"></div><div class="smart-config-help">فقط داده همان روز انتخابی ملاک است؛ میانگین چندروزه محاسبه نمی‌شود. تاریخ شمسی را به شکل ۱۴۰۵/۰۶/۲۱ وارد کن.</div><div class="smart-config-actions"><button type="button" class="smart-config-cancel" id="smartConfigCancel">انصراف</button><button type="button" class="smart-config-save" id="smartConfigSave">تأیید و ذخیره</button></div></section>';
+ document.body.appendChild(smartModal);let editingSmartNode=null;
+ const projectNameInput=document.getElementById('filterProjectName'),projectSaveBtn=document.getElementById('filterProjectSave'),projectNewBtn=document.getElementById('filterProjectNew'),projectList=document.getElementById('filterProjectList'),projectDeleteBtn=document.getElementById('filterProjectDelete'),projectFeedback=document.getElementById('filterProjectFeedback');
+ let activeProjectName='',loadingProject=false;
+ const PROJECTS_KEY='rrs_saved_filter_projects_v1';
+ function getProjects(){try{const v=JSON.parse(localStorage.getItem(PROJECTS_KEY)||'[]');return Array.isArray(v)?v:[]}catch(e){return []}}
+ function putProjects(a){try{localStorage.setItem(PROJECTS_KEY,JSON.stringify(a));return true}catch(e){projectFeedback.textContent='ذخیره‌سازی انجام نشد؛ فضای ذخیره مرورگر را بررسی کن.';return false}}
+ function graphSnapshot(){return {version:1,name:activeProjectName,nodes:nodes.map(n=>({id:n.id,name:n.name,code:n.code,configType:n.configType||null,settings:n.settings||null,x:n.x,y:n.y})),wires:wires.map(w=>({from:w.from,to:w.to}))}}
+ function refreshProjectList(selectName=''){if(!projectList)return;const arr=getProjects();projectList.innerHTML='<option value="">فیلترهای ذخیره‌شده</option>';arr.forEach(p=>{const o=document.createElement('option');o.value=p.name;o.textContent=p.name;projectList.appendChild(o)});projectList.value=selectName||''}
+ function persistActiveProject(){if(loadingProject||!activeProjectName)return;const a=getProjects(),snap=graphSnapshot();snap.name=activeProjectName;const i=a.findIndex(x=>x.name===activeProjectName);if(i<0)a.push(snap);else a[i]=snap;putProjects(a);refreshProjectList(activeProjectName)}
+ function clearGraph(){nodes.forEach(n=>n.el.remove());nodes=[];wires=[];selectedNode=null;selectedWire=null;connectFrom=null;nodeId=0;wireCounter=0;refresh()}
+ function loadProject(name){const saved=getProjects().find(p=>p.name===name);if(!saved)return;loadingProject=true;clearGraph();activeProjectName=saved.name;projectNameInput.value=saved.name;const idMap={};(saved.nodes||[]).forEach(item=>{makeNode(item.name,item.code,item.configType||null,item.settings||null);const n=nodes[nodes.length-1];idMap[item.id]=n.id;n.x=Number(item.x)||0;n.y=Number(item.y)||0;if(n.settings){n.el.dataset.config=JSON.stringify(n.settings);if(n.configType==='smartIn'||n.configType==='smartOut')n.el.querySelector('.node-label').textContent=n.name+' ✓';}if(item.code&&String(item.code).startsWith('cfield'))n.el.classList.add('output-node');});wires=(saved.wires||[]).map(w=>({id:++wireCounter,from:idMap[w.from],to:idMap[w.to]})).filter(w=>w.from&&w.to);refresh();loadingProject=false;projectFeedback.textContent='فیلتر «'+saved.name+'» بارگذاری شد.';refreshProjectList(saved.name)}
+ if(projectSaveBtn)projectSaveBtn.addEventListener('click',()=>{const name=(projectNameInput.value||'').trim();if(!name){projectFeedback.textContent='ابتدا برای فیلتر یک نام وارد کن.';projectNameInput.focus();return;}activeProjectName=name;const a=getProjects(),snap=graphSnapshot();snap.name=name;const i=a.findIndex(x=>x.name===name);if(i<0)a.push(snap);else a[i]=snap;if(putProjects(a)){projectFeedback.textContent='فیلتر «'+name+'» ذخیره شد. تغییرات بعدی آن نیز خودکار ذخیره می‌شود.';refreshProjectList(name)}});
+ if(projectNewBtn)projectNewBtn.addEventListener('click',()=>{if(nodes.length&&activeProjectName){persistActiveProject()}clearGraph();activeProjectName='';projectNameInput.value='';projectList.value='';projectFeedback.textContent='صفحه فیلترنویسی خالی شد؛ فیلترهای ذخیره‌شده باقی هستند.'});
+ if(projectList)projectList.addEventListener('change',()=>{if(projectList.value)loadProject(projectList.value)});
+ if(projectDeleteBtn)projectDeleteBtn.addEventListener('click',()=>{const name=projectList.value||activeProjectName;if(!name){projectFeedback.textContent='ابتدا یک فیلتر ذخیره‌شده را انتخاب کن.';return;}if(!confirm('فیلتر «'+name+'» از فهرست ذخیره‌ها حذف شود؟'))return;putProjects(getProjects().filter(p=>p.name!==name));if(activeProjectName===name){activeProjectName='';projectNameInput.value='';clearGraph()}refreshProjectList();projectFeedback.textContent='فیلتر ذخیره‌شده حذف شد.'});
+ refreshProjectList();
+ const $=id=>document.getElementById(id);
+ function dateLabel(mode,value){if(mode==='today')return 'امروز';if(mode==='custom')return value;if(mode==='months')return value+' ماه قبل';return value+' روز کاری قبل';}
+ function openSmartSettings(n){editingSmartNode=n;const isIn=n.configType==='smartIn',v=n.settings||{perCapitaToman:100000000,power:2,dateMode:'days',dateValue:'1'};$('smartConfigTitle').textContent=isIn?'تنظیمات ورود پول هوشمند':'تنظیمات خروج پول هوشمند';$('smartPerLabel').textContent=isIn?'حداقل سرانه خرید حقیقی (تومان)':'حداقل سرانه فروش حقیقی (تومان)';$('smartPowerLabel').textContent=isIn?'حداقل قدرت خریدار حقیقی':'حداقل قدرت فروشنده حقیقی';$('smartPer').value=v.perCapitaToman??100000000;$('smartPower').value=v.power??2;$('smartDateMode').value=v.dateMode||'days';$('smartDateValue').value=v.dateValue||'1';updateDateInput();smartModal.classList.add('open');}
+ function updateDateInput(){const mode=$('smartDateMode').value;$('smartDateValueWrap').style.display=mode==='today'?'none':'block';$('smartDateValueLabel').textContent=mode==='custom'?'تاریخ شمسی (مثلاً ۱۴۰۵/۰۶/۲۱)':mode==='months'?'تعداد ماه قبل':'تعداد روز کاری قبل';$('smartDateValue').type=mode==='custom'?'text':'number';if(mode==='custom'&&!$('smartDateValue').value.includes('/'))$('smartDateValue').value='۱۴۰۵/۰۶/۲۱';}
+ $('smartDateMode').addEventListener('change',updateDateInput);$('smartConfigCancel').addEventListener('click',()=>smartModal.classList.remove('open'));
+ $('smartConfigSave').addEventListener('click',()=>{if(!editingSmartNode)return;const n=editingSmartNode,mode=$('smartDateMode').value,raw=$('smartDateValue').value.trim(),per=Math.max(0,Number($('smartPer').value)||0),power=Math.max(.1,Number($('smartPower').value)||2);if(mode==='custom'&&!/^\d{4}[\/.-]\d{1,2}[\/.-]\d{1,2}$/.test(raw.replace(/[۰-۹]/g,d=>'۰۱۲۳۴۵۶۷۸۹'.indexOf(d)))){alert('تاریخ شمسی را به شکل ۱۴۰۵/۰۶/۲۱ وارد کن.');return;}if(mode!=='today'&&mode!=='custom'&&(!Number(raw)||Number(raw)<1)){alert('تعداد روز یا ماه باید حداقل ۱ باشد.');return;}n.settings={direction:n.configType==='smartIn'?'in':'out',perCapitaToman:per,power,dateMode:mode,dateValue:mode==='today'?'':raw,exactSingleDay:true};const date=dateLabel(mode,raw);n.code=(n.configType==='smartIn'?'SMART_MONEY_IN':'SMART_MONEY_OUT')+';perCapitaToman>='+per+';power>='+power+';date='+date+';singleDay=true';n.el.dataset.config=JSON.stringify(n.settings);n.el.title=n.name+' | سرانه: '+per.toLocaleString('fa-IR')+' تومان | قدرت: '+power+' | '+date;const label=n.el.querySelector('.node-label');if(label)label.textContent=n.name+' ✓';smartModal.classList.remove('open');refresh();persistActiveProject();});
+ function nodeById(id){return nodes.find(n=>n.id===id)}
+ function portPoint(n,which){return{x:n.x+(which==='out'?38:0),y:n.y+17}}
+ function drawWires(){svg.setAttribute('viewBox','0 0 900 900');svg.innerHTML='';wires.forEach(w=>{const a=nodeById(w.from),b=nodeById(w.to);if(!a||!b)return;const p=portPoint(a,'out'),q=portPoint(b,'in'),dx=Math.max(24,Math.abs(q.x-p.x)*.45);const path=document.createElementNS('http://www.w3.org/2000/svg','path');path.setAttribute('d',`M ${p.x} ${p.y} C ${p.x+dx} ${p.y}, ${q.x-dx} ${q.y}, ${q.x} ${q.y}`);path.setAttribute('class','filter-wire'+(selectedWire===w.id?' selected':''));path.dataset.wireId=w.id;svg.appendChild(path);});}
+ function refresh(){nodes.forEach(n=>{n.el.style.left=n.x+'px';n.el.style.top=n.y+'px';n.el.classList.toggle('selected',selectedNode===n.id);n.el.classList.toggle('eraser-hover',deleteMode);n.el.classList.toggle('connect-source',connectMode&&connectFrom===n.id);});drawWires();if(hint){hint.hidden=nodes.length>0&&!connectMode;if(connectMode&&connectFrom===null)hint.innerHTML='حالت اتصال روشن است<br>بلوک مبدأ را لمس کن';else if(connectMode&&connectFrom!==null)hint.innerHTML='مبدأ انتخاب شد<br>بلوک مقصد را لمس کن';else hint.innerHTML='انتخاب بلوک از پنل داده، آن را اینجا می‌سازد.<br>برای اتصال، تب اتصال را روشن کن و دو بلوک را به‌ترتیب لمس کن.';}}
+ function removeNode(id){nodes=nodes.filter(n=>{if(n.id===id){n.el.remove();return false}return true});wires=wires.filter(w=>w.from!==id&&w.to!==id);if(selectedNode===id)selectedNode=null;connectFrom=null;refresh();persistActiveProject();}
+ function makeNode(name,code,configType=null,settings=null){const id=++nodeId,el=document.createElement('div');el.className='filter-node';el.title=name+' ('+code+')';el.setAttribute('role','button');el.setAttribute('aria-label',name);el.innerHTML='<span class="node-label"></span><span class="filter-port out" title="خروجی"></span><span class="filter-port in" title="ورودی"></span>';el.querySelector('.node-label').textContent=name;canvas.appendChild(el);const n={id,name,code,el,configType,settings,x:Math.max(5,Math.min(862,30+(nodes.length%5)*70)),y:Math.max(5,Math.min(862,30+(nodes.length%6)*65))};if(String(code).startsWith('cfield'))el.classList.add('output-node');nodes.push(n);
+ el.querySelector('.filter-port.out').addEventListener('click',e=>{e.stopPropagation();if(deleteMode){removeNode(id);return;}if(!connectMode)return;connectFrom=id;selectedNode=id;selectedWire=null;refresh();});
+ el.querySelector('.filter-port.in').addEventListener('click',e=>{e.stopPropagation();if(deleteMode){removeNode(id);return;}if(!connectMode)return;if(connectFrom!==null&&connectFrom!==id){if(!wires.some(w=>w.from===connectFrom&&w.to===id))wires.push({id:++wireCounter,from:connectFrom,to:id});connectFrom=null;selectedNode=null;refresh();persistActiveProject();}else{selectedNode=id;refresh();}});
+ el.addEventListener('click',e=>{if(e.target.classList.contains('filter-port'))return;if(deleteMode){removeNode(id);return;}if(connectMode){if(connectFrom===null){connectFrom=id;selectedNode=id;selectedWire=null;refresh();}else if(connectFrom!==id){if(!wires.some(w=>w.from===connectFrom&&w.to===id))wires.push({id:++wireCounter,from:connectFrom,to:id});connectFrom=null;selectedNode=null;selectedWire=null;refresh();persistActiveProject();}return;}selectedNode=id;selectedWire=null;refresh();if(n.configType==='smartIn'||n.configType==='smartOut')openSmartSettings(n);});
+ el.addEventListener('pointerdown',e=>{if(e.target.classList.contains('filter-port')||deleteMode)return;e.preventDefault();const sx=e.clientX,sy=e.clientY,ox=n.x,oy=n.y;el.setPointerCapture(e.pointerId);function move(ev){n.x=Math.max(0,Math.min(862,ox+ev.clientX-sx));n.y=Math.max(0,Math.min(862,oy+ev.clientY-sy));refresh();}function up(){el.removeEventListener('pointermove',move);el.removeEventListener('pointerup',up);el.removeEventListener('pointercancel',up);persistActiveProject();}el.addEventListener('pointermove',move);el.addEventListener('pointerup',up);el.addEventListener('pointercancel',up);});refresh();persistActiveProject();}
+ document.querySelectorAll('#filter .filter-data-block').forEach(block=>block.addEventListener('click',()=>{
+   const type=block.dataset.configType;let settings=null,code=block.dataset.blockCode||'';
+   if(code==='__CONSTANT__'){
+     const raw=prompt('عدد یا مقدار ثابت را وارد کن:','1');if(raw===null)return;
+     const normalized=raw.trim().replace(/[۰-۹]/g,d=>'۰۱۲۳۴۵۶۷۸۹'.indexOf(d)).replace(/٫/g,'.').replace(/٬/g,'');
+     if(!normalized||!Number.isFinite(Number(normalized))){alert('لطفاً یک مقدار عددی معتبر وارد کن.');return;}
+     code=String(Number(normalized));
+     makeNode('مقدار ثابت: '+normalized,code);
+     const n=nodes[nodes.length-1];n.settings={constant:Number(normalized)};n.el.dataset.config=JSON.stringify(n.settings);n.el.title='مقدار ثابت: '+normalized;persistActiveProject();
+     const parent=block.closest('.filter-data-panel');if(parent)parent.hidden=true;
+     [tab,clientTab,supplyTab,calcTab,averageTab,outputTab].forEach(t=>{if(t)t.setAttribute('aria-expanded','false');});
+     return;
+   }
+   if(type==='smartIn'||type==='smartOut'){
+     const defaults={direction:type==='smartIn'?'in':'out',perCapitaToman:100000000,power:2,dateMode:'days',dateValue:'1',exactSingleDay:true};
+     makeNode(block.dataset.blockName||block.textContent.trim(),code,type,defaults);
+     const parent=block.closest('.filter-data-panel');if(parent)parent.hidden=true;
+     [tab,clientTab,supplyTab,calcTab,averageTab,outputTab].forEach(t=>{if(t)t.setAttribute('aria-expanded','false');});
+     return;
+   }else if(type==='demand'){
+     const ratio=prompt('حداقل نسبت قدرت تقاضا به عرضه (مثلاً 1.5):','1.5');if(ratio===null)return;
+     const method=prompt('روش محاسبه: volume برای حجم یا value برای ارزش ریالی','volume');if(method===null)return;
+     const minBuy=prompt('حداقل مجموع حجم خرید (۰ یعنی بدون حداقل):','0');if(minBuy===null)return;
+     const increase=prompt('حداقل افزایش نسبت به نمونه قبلی به درصد (۰ یعنی غیرفعال):','20');if(increase===null)return;
+     settings={ratio:Math.max(0.1,Number(ratio)||1.5),method:String(method).toLowerCase()==='value'?'value':'volume',minBuy:Math.max(0,Number(minBuy)||0),increase:Math.max(0,Number(increase)||0)};
+     code='ratio>='+settings.ratio+';method='+settings.method+';minBuy='+settings.minBuy+';risePct='+settings.increase;
+   }else if(type==='queue'){
+     const interval=prompt('فاصله نمونه‌برداری به دقیقه:','1');if(interval===null)return;
+     const reduction=prompt('حداقل درصد کاهش حجم صف فروش:','20');if(reduction===null)return;
+     const minVol=prompt('حداقل حجم معامله‌شده در بازه:','10000');if(minVol===null)return;
+     const priceRise=prompt('حداقل فاصله قیمت از آستانه پایین، درصد (۰ یعنی بدون شرط):','0.5');if(priceRise===null)return;
+     settings={interval:Math.max(1,Number(interval)||1),reduction:Math.max(1,Math.min(100,Number(reduction)||20)),minVol:Math.max(0,Number(minVol)||0),priceRise:Math.max(0,Number(priceRise)||0)};
+     code='intervalMin='+settings.interval+';queueDropPct='+settings.reduction+';minTradeVol='+settings.minVol+';riseFromFloorPct='+settings.priceRise;
+   }
+   makeNode(block.dataset.blockName||block.textContent.trim(),code);
+   if(settings){const n=nodes[nodes.length-1];n.settings=settings;n.el.title=n.name+' | تنظیمات: '+JSON.stringify(settings);n.el.dataset.config=JSON.stringify(settings);persistActiveProject();}
+   const parent=block.closest('.filter-data-panel');if(parent)parent.hidden=true;
+   [tab,clientTab,supplyTab,calcTab,averageTab,outputTab].forEach(t=>{if(t)t.setAttribute('aria-expanded','false');});
+ }));
+ eraser.addEventListener('click',()=>{deleteMode=!deleteMode;connectMode=false;connectFrom=null;eraser.classList.toggle('active',deleteMode);connectBtn.classList.remove('active');eraser.setAttribute('aria-pressed',String(deleteMode));connectBtn.setAttribute('aria-pressed','false');eraser.title=deleteMode?'پاک‌کن روشن: بلوک یا سیم را لمس کن':'پاک‌کن';});
+ connectBtn.addEventListener('click',()=>{connectMode=!connectMode;deleteMode=false;connectFrom=null;connectBtn.classList.toggle('active',connectMode);eraser.classList.remove('active');connectBtn.setAttribute('aria-pressed',String(connectMode));eraser.setAttribute('aria-pressed','false');connectBtn.title=connectMode?'اتصال روشن: بلوک مبدأ و سپس بلوک مقصد را لمس کن':'اتصال بلوک‌ها';refresh();});
+ svg.addEventListener('click',e=>{const path=e.target.closest('.filter-wire');if(!path)return;const id=Number(path.dataset.wireId);if(deleteMode){wires=wires.filter(w=>w.id!==id);selectedWire=null;refresh();persistActiveProject();}else if(!connectMode){selectedWire=id;selectedNode=null;refresh();}});
+ window.addEventListener('resize',drawWires);
+})();
+</script>
+</body></html>
